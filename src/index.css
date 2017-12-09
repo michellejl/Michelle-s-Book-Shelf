@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Special+Elite");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Special Elite', cursive; }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #3B3F42;
+  background: #FEFEFE; }
+
+/*# sourceMappingURL=index.css.map */

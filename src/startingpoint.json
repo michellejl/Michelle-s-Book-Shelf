@@ -1,0 +1,124 @@
+{
+  "books": {
+    "0": {
+      "title": "The Hitchhiker's Guide to the Galaxy",
+      "author": "Douglas Adams",
+      "summary": "",
+      "coverIMG": "https://images-na.ssl-images-amazon.com/images/I/51SZyBVNjtL._SX340_BO1,204,203,200_.jpg",
+      "shelf": "read",
+      "rating": 4
+    },
+    "1": {
+      "title": "The Restaurant at the End of the Universe",
+      "author": "Douglas Adams",
+      "summary": "",
+      "coverIMG": "https://images.gr-assets.com/books/1361556590l/68348.jpg",
+      "shelf": "read",
+      "rating": 4
+    },
+    "2": {
+      "title": "Life, the Universe and Everything",
+      "author": "Douglas Adams",
+      "summary": "",
+      "coverIMG": "http://vignette3.wikia.nocookie.net/hitchhikers/images/0/01/Life%2C_the_Universe_and_Everything.jpg/revision/latest?cb=20140520175612",
+      "shelf": "read",
+      "rating": 4
+    },
+    "3": {
+      "title": "So Long, and Thanks for All the Fish",
+      "author": "Douglas Adams",
+      "summary": "",
+      "coverIMG": "http://vignette2.wikia.nocookie.net/hitchhikers/images/a/a3/So_Long%2C_and_Thanks_for_All_the_Fish.jpg/revision/latest?cb=20140520180054",
+      "shelf": "read",
+      "rating": 4
+    },
+    "4": {
+      "title": "The Long Dark Tea-Time of the Soul",
+      "author": "Douglas Adams",
+      "summary": "",
+      "coverIMG": "http://static.tvtropes.org/pmwiki/pub/images/LongDarkTeaTimeOfTheSoul_6378.jpg",
+      "shelf": "want",
+      "rating": 0
+    },
+    "5": {
+      "title": "Getting Things Done: the art of stress-free productivity",
+      "author": "David Allen",
+      "summary": "",
+      "coverIMG": "https://images-na.ssl-images-amazon.com/images/I/71U4uP27xVL.jpg",
+      "shelf": "current",
+      "rating": 5
+    },
+    "6": {
+      "title": "Flowers in the Attic",
+      "author": "V.C. Andrews",
+      "summary": "",
+      "coverIMG": "https://images-na.ssl-images-amazon.com/images/I/810eqkZ6DgL.jpg",
+      "shelf": "read",
+      "rating": 4
+    },
+    "7": {
+      "title": "Petals on the Wind",
+      "author": "V.C. Andrews",
+      "summary": "",
+      "coverIMG": "https://upload.wikimedia.org/wikipedia/en/thumb/d/de/PetalsontheWind.jpg/220px-PetalsontheWind.jpg",
+      "shelf": "read",
+      "rating": 2
+    },
+    "8": {
+      "title": "The Source of Magic",
+      "author": "Piers Anthony",
+      "summary": "",
+      "coverIMG": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Source_of_Magic.jpg/220px-Source_of_Magic.jpg",
+      "shelf": "read",
+      "rating": 3
+    },
+    "9": {
+      "title": "A Spell for Chameleon",
+      "author": "Piers Anthony",
+      "summary": "",
+      "coverIMG": "https://i0.wp.com/upload.wikimedia.org/wikipedia/en/2/25/PiersAnthony_ASpellForChameleon.jpg",
+      "shelf": "read",
+      "rating": 2
+    },
+    "10": {
+      "title": "Peter Pan",
+      "author": "J.M. Barrie",
+      "summary": "",
+      "coverIMG": "https://images-na.ssl-images-amazon.com/images/I/51f-7KjjFeL._SX317_BO1,204,203,200_.jpg",
+      "shelf": "read",
+      "rating": 5
+    },
+    "11": {
+      "title": "The Looking Glass Wars",
+      "author": "Frank Beddor",
+      "summary": "",
+      "coverIMG": "https://images-na.ssl-images-amazon.com/images/I/51FuuYu0SlL._SX331_BO1,204,203,200_.jpg",
+      "shelf": "read",
+      "rating": 3
+    },
+    "12": {
+      "title": "Seeing Redd",
+      "author": "Frank Beddor",
+      "summary": "",
+      "coverIMG": "https://images-na.ssl-images-amazon.com/images/I/51OrXJO0WuL._AC_UL320_SR214,320_.jpg",
+      "shelf": "read",
+      "rating": 3
+    },
+    "13": {
+      "title": "ArchEnemy",
+      "author": "Frank Beddor",
+      "summary": "",
+      "coverIMG": "https://images-na.ssl-images-amazon.com/images/I/51HH3M8PgjL._AC_UL320_SR214,320_.jpg",
+      "shelf": "read",
+      "rating": 3
+    },
+    "14": {
+      "title": "Alice I Have Been",
+      "author": "Melanie Benjamin",
+      "summary": "",
+      "coverIMG": "https://images-na.ssl-images-amazon.com/images/I/51mbqGw0WZL._SY344_BO1,204,203,200_.jpg",
+      "shelf": "want",
+      "rating": 0
+    }
+  }
+}

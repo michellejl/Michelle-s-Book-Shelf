@@ -13,10 +13,6 @@ const Container = styled.div`
   max-width: 750px;
 `
 
-
-
-
-
 class App extends Component {
   state = {
     books: [

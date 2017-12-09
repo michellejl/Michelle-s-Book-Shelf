@@ -15,12 +15,14 @@ position: absolute;
 border: 1px solid ${c_dark};
 background: ${c_white};
 z-index: 10;
-p {
+label {
   border: 1px solid ${c_dark};
   padding: 5px;
+  display: block;
   margin: 0;
   &:hover {
     background: ${c_blue};
+    cursor: pointer;
     &.list-title {
       background: ${c_white};
     }
@@ -33,28 +35,55 @@ p {
 class MoveMenu extends Component {
 
   state = {
-    currentChecked: false,
-    wantChecked: false,
-    readChecked: false,
-    selectedOption: false
+    selectedOption: ''
+  }
+
+  handleOptionChange = (e) => {
+    this.setState({
+      selectedOption: e.target.value
+    });
+  }
+
+  componentDidMount() {
+    this.setState({
+      selectedOption: this.props.shelf
+    })
   }
 
   render() {
     return (
       <MoveMenuForm>
         <p className="list-title">Move Book:</p>
-        <p>
-          <input type="radio" name="shelf" value="current" checked={this.props.shelf === 'current'} />
+        <label>
+          <input
+            type="radio"
+            name="shelf"
+            value="current"
+            checked={this.state.selectedOption === 'current'}
+            onChange={this.handleOptionChange}
+          />
           Currently Reading
-        </p>
-        <p>
-          <input type="radio" name="shelf" value="want" checked={this.props.shelf === 'want'} />
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="shelf"
+            value="want"
+            checked={this.state.selectedOption === 'want'}
+            onChange={this.handleOptionChange}
+          />
           Want to Read
-        </p>
-        <p>
-          <input type="radio" name="shelf" value="read" checked={this.props.shelf === 'read'} />
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="shelf"
+            value="read"
+            checked={this.state.selectedOption === 'read'}
+            onChange={this.handleOptionChange}
+          />
           Read
-        </p>
+        </label>
       </MoveMenuForm>
     )
   }

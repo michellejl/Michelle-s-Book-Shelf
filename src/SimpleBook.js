@@ -65,7 +65,7 @@ class SimpleBook extends Component {
         </Icon>
 
         {this.state.menuOpen ? (
-          <MoveMenu shelf={book.shelf} />
+          <MoveMenu shelf={book.shelf} book={book} />
         ) : (<div></div>)}
 
         <BookDetails>

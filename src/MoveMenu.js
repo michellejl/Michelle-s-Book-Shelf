@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import firebase from './firebase'
 
 
 var c_blue = '#5AB9CF'
@@ -32,17 +33,31 @@ label {
   }
 }
 `
+
+function updateShelf(title, newShelf) {
+  firebase.database().ref('books/' + title).set({
+    shelf: newShelf
+  });
+}
+
 class MoveMenu extends Component {
 
   state = {
     selectedOption: ''
   }
 
+
+
   handleOptionChange = (e) => {
     this.setState({
       selectedOption: e.target.value
     });
+    var title = this.props.book.title
+    updateShelf(title, this.state.selectedOption)
+
   }
+
+
 
   componentDidMount() {
     this.setState({

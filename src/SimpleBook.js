@@ -57,15 +57,20 @@ class SimpleBook extends Component {
 
   render() {
     const book = this.props.book
+    const bookID = this.props.bookID
     return (
       <Book>
+
         <Cover alt="" src={book.coverIMG} />
+
         <Icon onClick={this.menuClickHandler}>
           <i className="fa fa-chevron-circle-down" aria-hidden="true"></i>
         </Icon>
-
         {this.state.menuOpen ? (
-          <MoveMenu shelf={book.shelf} book={book} />
+          <MoveMenu
+            shelf={book.shelf}
+            bookID={bookID}
+            book={book} />
         ) : (<div></div>)}
 
         <BookDetails>

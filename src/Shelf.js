@@ -26,23 +26,13 @@ class Shelf extends Component {
   }
 
   render() {
-    let booksOnShelf
-    if (this.props.shelf === 'Read') {
-      booksOnShelf = this.props.books.filter((book) => book.shelf === 'read')
-    } else if (this.props.shelf === 'Want to Read') {
-      booksOnShelf = this.props.books.filter((book) => book.shelf === 'want')
-    } else if (this.props.shelf === "Currently Reading") {
-      booksOnShelf = this.props.books.filter((book) => book.shelf === 'current')
-    } else {
-      booksOnShelf = this.props.books
-    }
 
     return (
       <BookShelf>
         <ShelfTitle>{this.props.shelf}</ShelfTitle>
 
-        {booksOnShelf.map((book) => (
-          <SimpleBook key={book.title} book={book} />
+        {this.props.books.map((book) => (
+          <SimpleBook key={book[0]} bookID={book[0]} book={book[1]} />
         ))}
       </BookShelf>
     );

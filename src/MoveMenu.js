@@ -43,10 +43,8 @@ function updateShelf(title, newShelf) {
 class MoveMenu extends Component {
 
   state = {
-    selectedOption: ''
+    selectedOption: this.props.shelf
   }
-
-
 
   handleOptionChange = (e) => {
     this.setState({
@@ -55,14 +53,6 @@ class MoveMenu extends Component {
     var title = this.props.book.title
     updateShelf(title, this.state.selectedOption)
 
-  }
-
-
-
-  componentDidMount() {
-    this.setState({
-      selectedOption: this.props.shelf
-    })
   }
 
   render() {

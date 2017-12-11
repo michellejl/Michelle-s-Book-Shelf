@@ -62,24 +62,24 @@ class App extends Component {
               shelf='Read' />
           </Container>
         )} />
-        {/* <Route path="/shelf/currently-reading" render={() => (
+        <Route path="/shelf/currently-reading" render={() => (
           <Container>
             <Shelf
-              books={this.state.books}
+              books={this.state.current}
               shelf='Currently Reading' />
           </Container>
         )} />
         <Route path="/shelf/want-to-read" render={() => (
           <Container>
             <Shelf
-              books={this.state.books}
+              books={this.state.want}
               shelf='Want to Read' />
           </Container>
         )} />
         <Route path="/shelf/read" render={() => (
           <Container>
             <Shelf
-              books={this.state.books}
+              books={this.state.read}
               shelf='Read' />
           </Container>
         )} />
@@ -87,7 +87,7 @@ class App extends Component {
           <Container>
             <AddBookForm />
           </Container>
-        )} /> */}
+        )} />
         <Footer />
       </div>
     );

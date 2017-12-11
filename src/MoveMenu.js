@@ -16,7 +16,7 @@ position: absolute;
 border: 1px solid ${c_dark};
 background: ${c_white};
 z-index: 10;
-label {
+label, p {
   border: 1px solid ${c_dark};
   padding: 5px;
   display: block;
@@ -34,8 +34,8 @@ label {
 }
 `
 
-function updateShelf(title, newShelf) {
-  firebase.database().ref('books/' + title).set({
+function updateShelf(bookID, newShelf) {
+  firebase.database().ref('books/' + bookID + '/').update({
     shelf: newShelf
   });
 }
@@ -43,26 +43,17 @@ function updateShelf(title, newShelf) {
 class MoveMenu extends Component {
 
   state = {
-    selectedOption: ''
+    selectedOption: this.props.shelf,
+    bookID: this.props.bookID,
+    book: this.props.book
   }
-
-
 
   handleOptionChange = (e) => {
     this.setState({
       selectedOption: e.target.value
+    }, () => {
+      updateShelf(this.state.bookID, this.state.selectedOption)
     });
-    var title = this.props.book.title
-    updateShelf(title, this.state.selectedOption)
-
-  }
-
-
-
-  componentDidMount() {
-    this.setState({
-      selectedOption: this.props.shelf
-    })
   }
 
   render() {

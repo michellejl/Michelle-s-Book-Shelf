@@ -15,9 +15,10 @@ const Container = styled.div`
 
 class App extends Component {
   state = {
-    books: [
-      {}
-    ]
+    books: [],
+    current: [],
+    want: [],
+    read: []
   }
 
   componentDidMount() {
@@ -29,45 +30,56 @@ class App extends Component {
     }, function (errorObject) {
       console.log("The read failed: " + errorObject.code);
     }).then((books) => {
-      this.setState({ books: AllBooks })
+      AllBooks = Object.keys(AllBooks).map((key) => [Number(key), AllBooks[key]]);
+      let current = [], read = [], want = []
+      let sortingBooks = AllBooks.map((book) => {
+        if (book[1].shelf === 'current') { current.push(book) }
+        if (book[1].shelf === 'want') { want.push(book) }
+        if (book[1].shelf === 'read') { read.push(book) }
+      })
+      this.setState({ books: AllBooks, current, want, read })
     })
   }
 
   render() {
+
+    // let currentBooks = this.state.books.filter((book) => book.shelf === 'read')
+
+
     return (
       <div className="App">
         <Header />
         <Route exact path="/" render={() => (
           <Container>
             <Shelf
-              books={this.state.books}
+              books={this.state.current}
               shelf='Currently Reading' />
             <Shelf
-              books={this.state.books}
+              books={this.state.want}
               shelf='Want to Read' />
             <Shelf
-              books={this.state.books}
+              books={this.state.read}
               shelf='Read' />
           </Container>
         )} />
         <Route path="/shelf/currently-reading" render={() => (
           <Container>
             <Shelf
-              books={this.state.books}
+              books={this.state.current}
               shelf='Currently Reading' />
           </Container>
         )} />
         <Route path="/shelf/want-to-read" render={() => (
           <Container>
             <Shelf
-              books={this.state.books}
+              books={this.state.want}
               shelf='Want to Read' />
           </Container>
         )} />
         <Route path="/shelf/read" render={() => (
           <Container>
             <Shelf
-              books={this.state.books}
+              books={this.state.read}
               shelf='Read' />
           </Container>
         )} />

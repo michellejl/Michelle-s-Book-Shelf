@@ -6,6 +6,7 @@ import Footer from './Footer'
 import Shelf from './Shelf'
 import AddBookForm from './AddBookForm'
 import SearchForm from './search'
+import AllDetails from './BookDetails'
 import firebase from './firebase'
 
 const Container = styled.div`
@@ -107,6 +108,11 @@ class App extends Component {
         <Route path="/search" render={() => (
           <Container>
             <SearchForm books={this.state.books} />
+          </Container>
+        )} />
+        <Route path="/book/" render={() => (
+          <Container>
+            <AllDetails />
           </Container>
         )} />
         <Footer />

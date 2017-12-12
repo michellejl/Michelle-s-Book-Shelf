@@ -19,6 +19,12 @@ You should be able to set this project up fairly easily. I used Yarn.
 1. I am using Firebase to create and maintain my own database of books
 1. I have added a form to add a new book to my database
 
+## Things I want to add later:
+1. Edit book information from within app
+1. Form for people to recommend books for me to read
+1. Add a way for books to be sorted by author name
+1. Display my rating
+
 ___________________
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

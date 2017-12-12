@@ -58,10 +58,13 @@ class SimpleBook extends Component {
   render() {
     const book = this.props.book
     const bookID = this.props.bookID
+
     return (
       <Book>
 
-        <Cover alt="" src={book.coverIMG} />
+        <a href={'/book/' + bookID}>
+          <Cover alt="" src={book.coverIMG} />
+        </a>
 
         <Icon onClick={this.menuClickHandler}>
           <i className="fa fa-chevron-circle-down" aria-hidden="true"></i>

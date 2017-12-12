@@ -167,6 +167,486 @@
       "coverIMG": "https://images.gr-assets.com/books/1419456275l/47212.jpg",
       "shelf": "current",
       "rating": 0
+    },
+    "21": {
+      "title": "Ender's Game",
+      "author": "Orson Scott Card",
+      "summary": "Andrew 'Ender' Wiggin thinks he is playing computer simulated war games; he is, in fact, engaged in something far more desperate. The result of genetic experimentation, Ender may be the military genius Earth desperately needs in a war against an alien enemy seeking to destroy all human life. The only way to find out is to throw Ender into ever harsher training, to chip away and find the diamond inside, or destroy him utterly. Ender Wiggin is six years old when it begins. He will grow up fast. But Ender is not the only result of the experiment. The war with the Buggers has been raging for a hundred years, and the quest for the perfect general has been underway almost as long. Ender's two older siblings, Peter and Valentine, are every bit as unusual as he is, but in very different ways. While Peter was too uncontrollably violent, Valentine very nearly lacks the capability for violence altogether. Neither was found suitable for the military's purpose. But they are driven by their jealousy of Ender, and by their inbred drive for power. Peter seeks to control the political process, to become a ruler. Valentine's abilities turn more toward the subtle control of the beliefs of commoner and elite alike, through powerfully convincing essays. Hiding their youth and identities behind the anonymity of the computer networks, these two begin working together to shape the destiny of Earth-an Earth that has no future at all if their brother Ender fails.",
+      "coverIMG": "https://images.gr-assets.com/books/1408303130l/375802.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "22": {
+      "title": "Alice's Adventures in Wonderland",
+      "author": "Lewis Carroll",
+      "summary": "Lose yourself in Alice's story as she tumbles down the rabbit hole, swims through her own pool of tears, and finds herself in a rather curious place called Wonderland. There, she'll encounter the frantic White Rabbit, have a frustrating conversation with an eccentric caterpillar, and play croquette with the hot-headed Queen of Hearts. Follow Alice on her wild adventure.",
+      "coverIMG": "https://images.gr-assets.com/books/1426117422l/24611820.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "23": {
+      "title": "Calm Technology: Designing for Billions of Devices and the Internet of Things",
+      "author": "Amber Case",
+      "summary": "How can we use technology as tools instead of letting our technology use us? This practical book explores the concept of calm technology, a method for smoothly capturing the user s attention only when necessary, while calmly remaining in the user s periphery most of the time. You ll learn how to design products that work well, launch well, are easy to support, easy to use, and don t get in the way of a user s life. Old systems and bad interfaces will plague us if we don t learn how to design for the long term. By writing code that s small instead of large, and making simple systems rather than complex ones, we can begin to design technology that gets out of our way.Discover principles that follow the human lifestyle and environment in mind, allowing technology to amplify humanness instead of taking it awayDelve into types of alerts, product launch, 'calming' technology, and tech that smoothly enters people s livesLearn from a trained anthropologist and a technology hobbyist who sits on the edge between technology and how people use it. This book is ideal for anyone who actively builds or makes decisions about technology, including user experience designers, product designers, managers, creative directors, and developers.",
+      "coverIMG": "https://images.gr-assets.com/books/1451244698l/25997755.jpg",
+      "shelf": "",
+      "rating": 0
+    },
+    "24": {
+      "title": "City of Bones",
+      "author": "Cassandra Clare",
+      "summary": "When fifteen-year-old Clary Fray heads out to the Pandemonium Club in New York City, she hardly expects to witness a murder― much less a murder committed by three teenagers covered with strange tattoos and brandishing bizarre weapons. Then the body disappears into thin air. It's hard to call the police when the murderers are invisible to everyone else and when there is nothing―not even a smear of blood―to show that a boy has died. Or was he a boy? This is Clary's first meeting with the Shadowhunters, warriors dedicated to ridding the earth of demons. It's also her first encounter with Jace, a Shadowhunter who looks a little like an angel and acts a lot like a jerk. Within twenty-four hours Clary is pulled into Jace's world with a vengeance, when her mother disappears and Clary herself is attacked by a demon. But why would demons be interested in ordinary mundanes like Clary and her mother? And how did Clary suddenly get the Sight? The Shadowhunters would like to know... Exotic and gritty, exhilarating and utterly gripping, Cassandra Clare's ferociously entertaining fantasy takes readers on a wild ride that they will never want to end.",
+      "coverIMG": "https://images.gr-assets.com/books/1432730315l/256683.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "25": {
+      "title": "City of Ashes",
+      "author": "Cassandra Clare",
+      "summary": "Clary Fray just wishes that her life would go back to normal. But what's normal when you're a demon-slaying Shadowhunter, your mother is in a magically induced coma, and you can suddenly see Downworlders like werewolves, vampires, and faeries? If Clary left the world of the Shadowhunters behind, it would mean more time with her best friend, Simon, who's becoming more than a friend. But the Shadowhunting world isn't ready to let her go — especially her handsome, infuriating, newfound brother, Jace. And Clary's only chance to help her mother is to track down rogue Shadowhunter Valentine, who is probably insane, certainly evil — and also her father. To complicate matters, someone in New York City is murdering Downworlder children. Is Valentine behind the killings — and if he is, what is he trying to do? When the second of the Mortal Instruments, the Soul-Sword, is stolen, the terrifying Inquisitor arrives to investigate and zooms right in on Jace. How can Clary stop Valentine if Jace is willing to betray everything he believes in to help their father? In this breathtaking sequel to City of Bones, Cassandra Clare lures her readers back into the dark grip of New York City's Downworld, where love is never safe and power becomes the deadliest temptation.",
+      "coverIMG": "https://images.gr-assets.com/books/1432730356l/1582996.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "26": {
+      "title": "City of Glass",
+      "author": "Cassandra Clare",
+      "summary": "To save her mother's life, Clary must travel to the City of Glass, the ancestral home of the Shadowhunters - never mind that entering the city without permission is against the Law, and breaking the Law could mean death. To make things worse, she learns that Jace does not want her there, and Simon has been thrown in prison by the Shadowhunters, who are deeply suspicious of a vampire who can withstand sunlight. As Clary uncovers more about her family's past, she finds an ally in mysterious Shadowhunter Sebastian. With Valentine mustering the full force of his power to destroy all Shadowhunters forever, their only chance to defeat him is to fight alongside their eternal enemies. But can Downworlders and Shadowhunters put aside their hatred to work together? While Jace realizes exactly how much he's willing to risk for Clary, can she harness her newfound powers to help save the Glass City - whatever the cost? Love is a mortal sin and the secrets of the past prove deadly as Clary and Jace face down Valentine in the third installment of the New York Times bestselling series The Mortal Instruments.",
+      "coverIMG": "https://images.gr-assets.com/books/1369452339l/3777732.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "27": {
+      "title": "City of Fallen Angels",
+      "author": "Cassandra Clare",
+      "summary": "The Mortal War is over, and sixteen-year-old Clary Fray is back home in New York, excited about all the possibilities before her. She’s training to become a Shadowhunter and to use her unique power. Her mother is getting married to the love of her life. Downworlders and Shadowhunters are at peace at last. And—most importantly of all—she can finally call Jace her boyfriend. But nothing comes without a price. Someone is murdering Shadowhunters, provoking tensions between Downworlders and Shadowhunters that could lead to a second, bloody war. Clary’s best friend, Simon, can’t help her—his mother just found out that he’s a vampire, and now he’s homeless. When Jace begins to pull away from her without explaining why, Clary is forced to delve into the heart of a mystery whose solution reveals her worst nightmare: she herself has set in motion a terrible chain of events that could lead to her losing everything she loves. Even Jace.",
+      "coverIMG": "https://images.gr-assets.com/books/1369452302l/6752378.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "28": {
+      "title": "City of Lost Souls",
+      "author": "Cassandra Clare",
+      "summary": "What price is too high to pay, even for love? When Jace and Clary meet again, Clary is horrified to discover that the demon Lilith’s magic has bound her beloved Jace together with her evil brother Sebastian, and that Jace has become a servant of evil. The Clave is out to destroy Sebastian, but there is no way to harm one boy without destroying the other. As Alec, Magnus, Simon, and Isabelle wheedle and bargain with Seelies, demons, and the merciless Iron Sisters to try to save Jace, Clary plays a dangerous game of her own. The price of losing is not just her own life, but Jace’s soul. She’s willing to do anything for Jace, but can she still trust him? Or is he truly lost? Love. Blood. Betrayal. Revenge. Darkness threatens to claim the Shadowhunters in the harrowing fifth book of the Mortal Instruments series. ",
+      "coverIMG": "https://images.gr-assets.com/books/1460477703l/8755776.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "29": {
+      "title": "City of Heavenly Fire",
+      "author": "Cassandra Clare",
+      "summary": "In this dazzling and long-awaited conclusion to the acclaimed Mortal Instruments series, Clary and her friends fight the greatest evil they have ever faced: Clary's own brother. Sebastian Morgenstern is on the move, systematically turning Shadowhunter against Shadowhunter. Bearing the Infernal Cup, he transforms Shadowhunters into creatures out of nightmare, tearing apart families and lovers as the ranks of his Endarkened army swell. The embattled Shadowhunters withdraw to Idris - but not even the famed demon towers of Alicante can keep Sebastian at bay. And with the Nephilim trapped in Idris, who will guard the world against demons? When one of the greatest betrayals the Nephilim have ever known is revealed, Clary, Jace, Isabelle, Simon, and Alec must flee - even if their journey takes them deep into the demon realms, where no Shadowhunter has set foot before, and from which no human being has ever returned... Love will be sacrificed and lives lost in the terrible battle for the fate of the word in the thrilling final installment of the classic urban fantasy series The Mortal Instruments!",
+      "coverIMG": "https://images.gr-assets.com/books/1460477794l/8755785.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "30": {
+      "title": "Clockwork Angel",
+      "author": "Cassandra Clare",
+      "summary": "In a time when Shadowhunters are barely winning the fight against the forces of darkness, one battle will change the course of history forever. Welcome to the Infernal Devices trilogy, a stunning and dangerous prequel to the New York Times bestselling Mortal Instruments series. The year is 1878. Tessa Gray descends into London’s dark supernatural underworld in search of her missing brother. She soon discovers that her only allies are the demon-slaying Shadowhunters—including Will and Jem, the mysterious boys she is attracted to. Soon they find themselves up against the Pandemonium Club, a secret organization of vampires, demons, warlocks, and humans. Equipped with a magical army of unstoppable clockwork creatures, the Club is out to rule the British Empire, and only Tessa and her allies can stop them",
+      "coverIMG": "https://images.gr-assets.com/books/1454962884l/7171637.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "31": {
+      "title": "Clockwork Prince",
+      "author": "Cassandra Clare",
+      "summary": "In the magical underworld of Victorian London, Tessa Gray has at last found safety with the Shadowhunters. But that safety proves fleeting when rogue forces in the Clave plot to see her protector, Charlotte, replaced as head of the Institute. If Charlotte loses her position, Tessa will be out on the street—and easy prey for the mysterious Magister, who wants to use Tessa’s powers for his own dark ends. With the help of the handsome, self-destructive Will and the fiercely devoted Jem, Tessa discovers that the Magister’s war on the Shadowhunters is deeply personal. He blames them for a long-ago tragedy that shattered his life. To unravel the secrets of the past, the trio journeys from mist-shrouded Yorkshire to a manor house that holds untold horrors, from the slums of London to an enchanted ballroom where Tessa discovers that the truth of her parentage is more sinister than she had imagined. When they encounter a clockwork demon bearing a warning for Will, they realize that the Magister himself knows their every move—and that one of their own has betrayed them. Tessa finds her heart drawn more and more to Jem, but her longing for Will, despite his dark moods, continues to unsettle her. But something is changing in Will—the wall he has built around himself is crumbling. Could finding the Magister free Will from his secrets and give Tessa the answers about who she is and what she was born to do? As their dangerous search for the Magister and the truth leads the friends into peril, Tessa learns that when love and lies are mixed, they can corrupt even the purest heart. ",
+      "coverIMG": "https://images.gr-assets.com/books/1460477747l/10025305.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "32": {
+      "title": "Clockwork Princess",
+      "author": "Cassandra Clare",
+      "summary": "A net of shadows begins to tighten around the Shadowhunters of the London Institute. Mortmain plans to use his Infernal Devices, an army of pitiless automatons, to destroy the Shadowhunters. He needs only one last item to complete his plan: he needs Tessa Gray. Charlotte Branwell, head of the London Institute, is desperate to find Mortmain before he strikes. But when Mortmain abducts Tessa, the boys who lay equal claim to her heart, Jem and Will, will do anything to save her. For though Tessa and Jem are now engaged, Will is as much in love with her as ever. As those who love Tessa rally to rescue her from Mortmain’s clutches, Tessa realizes that the only person who can save her is herself. But can a single girl, even one who can command the power of angels, face down an entire army? Danger and betrayal, secrets and enchantment, and the tangled threads of love and loss intertwine as the Shadowhunters are pushed to the very brink of destruction in the breathtaking conclusion to the Infernal Devices trilogy.",
+      "coverIMG": "https://images.gr-assets.com/books/1436788488l/18335634.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "33": {
+      "title": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "summary": "Winning will make you famous.  Losing means certain death. The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory. When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. But Katniss has been close to death before. For her, survival is second nature.",
+      "coverIMG": "https://images.gr-assets.com/books/1447303603l/2767052.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "34": {
+      "title": "Discussing Design",
+      "author": "Adam Connor",
+      "summary": "Real critique has become a lost skill among collaborative teams today. Critique is intended to help teams strengthen their designs, products, and services, rather than be used to assert authority or push agendas under the guise of 'feedback'. In this practical guide, authors Adam Connor and Aaron Irizarry teach you techniques, tools, and a framework for helping members of your design team give and receive critique. Using firsthand stories and lessons from prominent figures in the design community, this book examines the good, the bad, and the ugly of feedback. You'll come away with tips, actionable insights, activities, and a cheat sheet for practicing critique as a part of your collaborative process. ",
+      "coverIMG": "https://images.gr-assets.com/books/1473874324l/32049560.jpg",
+      "shelf": "",
+      "rating": 0
+    },
+    "35": {
+      "title": "Mockingjay",
+      "author": "Suzanne Collins",
+      "summary": "Katniss Everdeen, girl on fire, has survived, even though her home has been destroyed. Gale has escaped. Katniss's family is safe. Peeta has been captured by the Capitol. District 13 really does exist. There are rebels. There are new leaders. A revolution is unfolding. It is by design that Katniss was rescued from the arena in the cruel and haunting Quarter Quell, and it is by design that she has long been part of the revolution without knowing it. District 13 has come out of the shadows and is plotting to overthrow the Capitol. Everyone, it seems, has had a hand in the carefully laid plans--except Katniss. The success of the rebellion hinges on Katniss's willingness to be a pawn, to accept responsibility for countless lives, and to change the course of the future of Panem. To do this, she must put aside her feelings of anger and distrust. She must become the rebels' Mockingjay--no matter what the personal cost.",
+      "coverIMG": "https://images.gr-assets.com/books/1358275419l/7260188.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "36": {
+      "title": "Catching Fire",
+      "author": "Suzanne Collins",
+      "summary": "Against all odds, Katniss has won the Hunger Games. She and fellow District 12 tribute Peeta Mellark are miraculously still alive. Katniss should be relieved, happy even. After all, she has returned to her family and her longtime friend, Gale. Yet nothing is the way Katniss wishes it to be. Gale holds her at an icy distance. Peeta has turned his back on her completely. And there are whispers of a rebellion against the Capitol - a rebellion that Katniss and Peeta may have helped create. Much to her shock, Katniss has fueled an unrest she's afraid she cannot stop. And what scares her even more is that she's not entirely convinced she should try. As time draws near for Katniss and Peeta to visit the districts on the Capitol's cruel Victory Tour, the stakes are higher than ever. If they can't prove, without a shadow of a doubt, that they are lost in their love for each other, the consequences will be horrifying.",
+      "coverIMG": "https://images.gr-assets.com/books/1358273780l/6148028.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "37": {
+      "title": "The Red Badge of Courage",
+      "author": "Stephen Crane",
+      "summary": "During an unnamed battle, 18-year-old private Henry Fleming survives what he considers to be a lost cause by escaping into a nearby wood, deserting his battalion. He finds a group of injured men in which one of the group, the 'Tattered Soldier', asks Henry, who's often referred to as 'The Youth', where he's wounded. Henry, embarrassed that he's whole, wanders thru the forest. He ultimately decides that running was the best thing, & that he's a small part of the army responsible for saving himself. When he learns that his battalion had won the battle, Henry feels guilty. As a result, he returns to his battalion & is injured when a cannon operator hits him in the head because he wouldn't let go of his arm. When he returns to camp, the other soldiers believe he was harmed by a bullet grazing him in battle. The next morning he goes into battle for a 3rd time. While looking for a stream from which to attain water, he discovers from the commanding officer that his regiment has a lackluster reputation. The officer speaks casually about sacrificing Henry's regiment because they're nothing more than 'mule drivers' & 'mud diggers'. With no regiments to spare, the general orders his men forward. In the final battle, Henry becomes one of the best fighters in his battalion as well as the flag bearer, finally proving his courage as a man. ",
+      "coverIMG": "https://images.gr-assets.com/books/1327936136l/35220.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "38": {
+      "title": "JavaScript: The Good Parts",
+      "author": "Douglas Crockford",
+      "summary": "Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and released in a hurry before it could be refined. This authoritative book scrapes away these bad features to reveal a subset of JavaScript that's more reliable, readable, and maintainable than the language as a whole-a subset you can use to create truly extensible and efficient code. Considered the JavaScript expert by many people in the development community, author Douglas Crockford identifies the abundance of good ideas that make JavaScript an outstanding object-oriented programming language-ideas such as functions, loose typing, dynamic objects, and an expressive object literal notation. Unfortunately, these good ideas are mixed in with bad and downright awful ideas, like a programming model based on global variables. When Java applets failed, JavaScript became the language of the Web by default, making its popularity almost completely independent of its qualities as a programming language. In JavaScript: The Good Parts, Crockford finally digs through the steaming pile of good intentions and blunders to give you a detailed look at all the genuinely elegant parts of JavaScript, including: Syntax Objects Functions Inheritance Arrays Regular expressions Methods Style Beautiful features The real beauty? As you move ahead with the subset of JavaScript that this book presents, you'll also sidestep the need to unlearn all the bad parts. Of course, if you want to find out more about the bad parts and how to use them badly, simply consult any other JavaScript book. With JavaScript: The Good Parts, you'll discover a beautiful, elegant, lightweight and highly expressive language that lets you create effective code, whether you're managing object libraries or just trying to get Ajax to run fast. If you develop sites or applications for the Web, this book is an absolute must.",
+      "coverIMG": "https://images.gr-assets.com/books/1328834793l/2998152.jpg",
+      "shelf": "want",
+      "rating": 0
+    },
+    "39": {
+      "title": "The Named",
+      "author": "Marianne Curley",
+      "summary": "Ethan lives a secret life as a Guardian of the Named. Under the guidance of Arkarian, his mentor, and with the help of Isabel, his unlikely but highly capable apprentice, Ethan has become a valued member of this other-worldly corps. As the only defense against the evil Order of Chaos, the Named travel through time to prevent the Order from altering history and thereby gaining power in the present and the future. As the threat from the Order intensifies, secrets of the past are revealed and villains and heroes are exposed. This gripping fantasy is set in modern times, but is infused with intrigue from the past, super-natural characters and surprising plot twists. Curley has written a winner through to the end.",
+      "coverIMG": "https://images.gr-assets.com/books/1431276638l/1034516.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "40": {
+      "title": "The Dark",
+      "author": "Marianne Curley",
+      "summary": "A year after Marduke's death, the Order's revenge is about to take shape. As they gain the upper hand in their battle against the Guardians, the Order's attempts to change history bear fruit and Ethan and Isabel notice subtle changes in their daily lives as an altered past impacts on the future.",
+      "coverIMG": "https://images.gr-assets.com/books/1316637278l/565593.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "41": {
+      "title": "The Key",
+      "author": "Marianne Curley",
+      "summary": "In the thrilling, final installment of the Guardians of Time trilogy, tentative guard members Matt and Rochelle have emerged as crucial players in fulfilling the prophecy of the Named. Matt has learned that he is the son of an immortal, while Rochelle is struggling with her newfound powers and her fear that the group doesn't trust her. In fact, their leader is certain that someone in the close-knit circle is a traitor-but who? As suspicions mount, friction threatens to tear apart the Guard. Will the members of the Named be able to overcome their fears and unite the Guardians of Time in their last stand against evil and chaos?",
+      "coverIMG": "https://images.gr-assets.com/books/1386913877l/104571.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "42": {
+      "title": "Old Magic",
+      "author": "Marianne Curley",
+      "summary": "Jarrod Thornton is mesmerizing, but Kate Warren doesn't know why. The moment the new guy walks into the room, Kate senses something strange and intense about him. Something supernatural. Her instincts are proven correct a few minutes later when, bullied by his classmates, Jarrod unknowingly conjures up a freak thunderstorm 'inside' their classroom. Jarrod doesn't believe in the paranormal. When Kate tries to convince him that he has extraordinary powers that need to be harnessed, he only puts up with her 'hocus pocus' notions because he finds her captivating. However, the dangerous, uncontrolled strengthening of his gift finally convinces Jarrod that he must take Kate's theories seriously. Together, they embark on a remarkable journey -- one which will unravel the mystery that has haunted Jarrod's family for generations and pit the teens against immense forces in a battle to undo the past and reshape the future.",
+      "coverIMG": "https://images.gr-assets.com/books/1300143395l/565595.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "43": {
+      "title": "The Maze Runner",
+      "author": "James Dashner",
+      "summary": "If you ain’t scared, you ain’t human. When Thomas wakes up in the lift, the only thing he can remember is his name. He’s surrounded by strangers—boys whose memories are also gone. Nice to meet ya, shank. Welcome to the Glade. Outside the towering stone walls that surround the Glade is a limitless, ever-changing maze. It’s the only way out—and no one’s ever made it through alive. Everything is going to change. Then a girl arrives. The first girl ever. And the message she delivers is terrifying. Remember. Survive. Run.",
+      "coverIMG": "https://images.gr-assets.com/books/1375596592l/6186357.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "44": {
+      "title": "The Scorch Trials",
+      "author": "James Dashner",
+      "summary": "Solving the Maze was supposed to be the end. Thomas was sure that escape from the Maze would mean freedom for him and the Gladers. But WICKED isn’t done yet. Phase Two has just begun. The Scorch.  There are no rules. There is no help. You either make it or you die. The Gladers have two weeks to cross through the Scorch—the most burned-out section of the world. And WICKED has made sure to adjust the variables and stack the odds against them.  Friendships will be tested. Loyalties will be broken. All bets are off. There are others now. Their survival depends on the Gladers’ destruction—and they’re determined to survive. ",
+      "coverIMG": "https://images.gr-assets.com/books/1388240248l/7631105.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "45": {
+      "title": "The Death Cure",
+      "author": "James Dashner",
+      "summary": "It’s the end of the line. WICKED has taken everything from Thomas: his life, his memories, and now his only friends—the Gladers. But it’s finally over. The trials are complete, after one final test. Will anyone survive? What WICKED doesn’t know is that Thomas remembers far more than they think. And it’s enough to prove that he can’t believe a word of what they say. The truth will be terrifying. Thomas beat the Maze. He survived the Scorch. He’ll risk anything to save his friends. But the truth might be what ends it all. The time for lies is over.",
+      "coverIMG": "https://images.gr-assets.com/books/1303997647l/7864437.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "46": {
+      "title": "Black Ice",
+      "author": "Becca Fitzpatrick",
+      "summary": "Danger is hard to resist in this sexy thriller from Becca Fitzpatrick, the New York Times bestselling author of the Hush, Hush saga. Britt Pheiffer has trained to backpack the Teton Range, but she isn’t prepared when her ex-boyfriend, who still haunts her every thought, wants to join her. Before Britt can explore her feelings for Calvin, an unexpected blizzard forces her to seek shelter in a remote cabin, accepting the hospitality of its two very handsome occupants—but these men are fugitives, and they take her hostage. Britt is forced to guide the men off the mountain, and knows she must stay alive long enough for Calvin to find her. The task is made even more complicated when Britt finds chilling evidence of a series of murders that have taken place there…and in uncovering this, she may become the killer’s next target. But nothing is as it seems, and everyone is keeping secrets, including Mason, one of her kidnappers. His kindness is confusing Britt. Is he an enemy? Or an ally?",
+      "coverIMG": "https://images.gr-assets.com/books/1414369023l/21943246.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "47": {
+      "title": "Hush, Hush",
+      "author": "Becca Fitzpatrick",
+      "summary": "Romance was not part of Nora Grey's plan. She's never been particularly attracted to the boys at her school, no matter how hard her best friend, Vee, pushes them at her. Not until Patch comes along. With his easy smile and eyes that seem to see inside her, Patch draws Nora to him against her better judgment. But after a series of terrifying encounters, Nora's not sure whom to trust. Patch seems to be everywhere she is and seems to know more about her than her closest friends. She can't decide whether she should fall into his arms or run and hide. And when she tries to seek some answers, she finds herself near a truth that is way more unsettling than anything Patch makes her feel. For she is right in the middle of an ancient battle between the immortal and those that have fallen - and, when it comes to choosing sides, the wrong choice will cost Nora her life.",
+      "coverIMG": "https://images.gr-assets.com/books/1358261334l/6339664.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "48": {
+      "title": "Crescendo",
+      "author": "Becca Fitzpatrick",
+      "summary": "Nora Grey's life is still far from perfect. Surviving an attempt on her life wasn't pleasant, but at least she got a guardian angel out of it. A mysterious, magnetic, gorgeous guardian angel. But despite his role in her life, Patch has been acting anything but angelic. He's more elusive than ever (if that's possible) and what's worse, he seems to be spending time with Nora's archenemy, Marcie Millar. Nora would have hardly noticed Scott Parnell, an old family friend who has moved back to town, if Patch hadn't been acting so distant. Even with Scott's totally infuriating attitude, Nora finds herself drawn to him - despite her lingering feelings that he is hiding something. If that weren't enough, Nora is haunted by images of her murdered father, and comes to question whether her Nephilim bloodline has anything to do with his death. Desperate to figure out what happened, she puts herself in increasingly dangerous situations to get the answer. But maybe some things are better left buried, because the truth could destroy everything - and everyone - she trusts.",
+      "coverIMG": "https://images.gr-assets.com/books/1362408146l/7791997.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "49": {
+      "title": "Silence",
+      "author": "Becca Fitzpatrick",
+      "summary": "Nora Grey can't remember the past five months of her life. After the initial shock of waking up in a cemetery and being told that she has been missing for weeks - with no one knowing where she was or who she was with - she tried to get her life back on track. Go to school, hang out with her best friend, Vee, and dodge mom's creepy new boyfriend. But there is this voice in the back of her head, an idea that she can almost reach out and touch. Visions of angel wings and unearthly creatures that have nothing to do with the life she knows. And this unshakable feeling that a part of her is missing. Then Nora crosses paths with a sexy stranger, whom she feels a mesmerizing connection to. He seems to hold all the answers...and her heart. Every minute she spends with him grows more and more intense until she realizes she could be falling in love. Again.",
+      "coverIMG": "https://images.gr-assets.com/books/1362408152l/10637766.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "50": {
+      "title": "Finale",
+      "author": "Becca Fitzpatrick",
+      "summary": "Nora and Patch thought their troubles were behind them. Hank is gone and they should be able to put his ugly vendetta to rest. But in Hank's absence, Nora has become the unwitting head of the Nephilim and must finish what Hank began. Which ultimately means destroying the fallen angels - destroying Patch. Nora will never let that happen, so she and Patch make a plan: lead everyone to believe they have broken up, and work the system from the inside. Nora will convince the Nephilim that they are making a mistake in fighting the fallen angels, and Patch will find out everything he can from the opposing side. They will end this war before it can even begin. But the best-laid plans often go awry. Nora is put through the paces in her new role and finds herself drawn to an addictive power she never anticipated. As the battle lines are drawn, Nora and Patch must confront the differences that have always been between them and either choose to ignore them or let them destroy the love they have always fought for. ",
+      "coverIMG": "https://images.gr-assets.com/books/1362408156l/12751687.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "51": {
+      "title": "The Thief Lord",
+      "author": "Cornelia Funke",
+      "summary": "Rich Aunt Esther wants only angelic orphan Boniface 5, not serious Prospero 12. She hires PI Victor Getz. Thief Lord Scipo brings loot, clothes, to runaways in abandoned theatre Stella. Hornet adds brothers to gang with tall Mosca and scrawny Riccio.  But Scipio hides a secret. And old Conte from a cursed isle wants a wooden wing, from grown orphan photographer Ida Spaveno, for his magic merry-go-round that changes ages. Interior illustrations by author.",
+      "coverIMG": "https://images.gr-assets.com/books/1327960342l/113304.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "52": {
+      "title": "The Fault in Our Stars",
+      "author": "John Green",
+      "summary": "Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel's story is about to be completely rewritten. Insightful, bold, irreverent, and raw, The Fault in Our Stars is award-winning author John Green's most ambitious and heartbreaking work yet, brilliantly exploring the funny, thrilling, and tragic business of being alive and in love. ",
+      "coverIMG": "https://images.gr-assets.com/books/1360206420l/11870085.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "53": {
+      "title": "Looking for Alaska",
+      "author": "John Green",
+      "summary": "Before. Miles “Pudge” Halter is done with his safe life at home. His whole life has been one big non-event, and his obsession with famous last words has only made him crave “the Great Perhaps” even more (Francois Rabelais, poet). He heads off to the sometimes crazy and anything-but-boring world of Culver Creek Boarding School, and his life becomes the opposite of safe. Because down the hall is Alaska Young. The gorgeous, clever, funny, sexy, self-destructive, screwed up, and utterly fascinating Alaska Young. She is an event unto herself. She pulls Pudge into her world, launches him into the Great Perhaps, and steals his heart. Then... After. Nothing is ever the same. ",
+      "coverIMG": "https://images.gr-assets.com/books/1394798630l/99561.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "54": {
+      "title": "Paper Town",
+      "author": "John Green",
+      "summary": "Quentin Jacobsen has spent a lifetime loving the magnificently adventurous Margo Roth Spiegelman from afar. So when she cracks open a window and climbs into his life—dressed like a ninja and summoning him for an ingenious campaign of revenge—he follows. After their all-nighter ends, and a new day breaks, Q arrives at school to discover that Margo, always an enigma, has now become a mystery. But Q soon learns that there are clues—and they're for him. Urged down a disconnected path, the closer he gets, the less Q sees the girl he thought he knew.",
+      "coverIMG": "https://images.gr-assets.com/books/1349013610l/6442769.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "55": {
+      "title": "Will Grayson, Will Grayson",
+      "author": "John Green",
+      "summary": "Will Grayson meets Will Grayson. One cold night, in a most unlikely corner of Chicago, two strangers are about to cross paths. From that moment on, their world will collide and lives intertwine. It's not that far from Evanston to Naperville, but Chicago suburbanites Will Grayson and Will Grayson might as well live on different planets. When fate delivers them both to the same surprising crossroads, the Will Graysons find their lives overlapping and hurtling in new and unexpected directions. With a push from friends new and old - including the massive, and massively fabulous, Tiny Cooper, offensive lineman and musical theater auteur extraordinaire - Will and Will begin building toward respective romantic turns-of-heart and the epic production of history's most awesome high school musical.",
+      "coverIMG": "https://images.gr-assets.com/books/1368393890l/6567017.jpg",
+      "shelf": "read",
+      "rating": 0
+    },
+    "56": {
+      "title": "Articulating Design Decisions: Communicate with Stakeholders, Keep Your Sanity, and Deliver the Best User Experience",
+      "author": "Tom Greever",
+      "summary": "Every designer has had to justify designs to non-designers, yet most lack the ability to explain themselves in a way that is compelling and fosters agreement. The ability to effectively articulate design decisions is critical to the success of a project, because the most articulate person often wins. This practical book provides principles, tactics, and actionable methods for talking about designs with executives, managers, developers, marketers, and other stakeholders who have influence over the project with the goal of winning them over and creating the best user experience.",
+      "coverIMG": "https://images.gr-assets.com/books/1444647757l/25520974.jpg",
+      "shelf": "",
+      "rating": 0
+    },
+    "57": {
+      "title": "An Astronaut's Guide to Life on Earth",
+      "author": "Chris Hadfield",
+      "summary": "Colonel Chris Hadfield has spent decades training as an astronaut and has logged nearly 4000 hours in space. During this time he has broken into a Space Station with a Swiss army knife, disposed of a live snake while piloting a plane, and been temporarily blinded while clinging to the exterior of an orbiting spacecraft. The secret to Col. Hadfield's success-and survival-is an unconventional philosophy he learned at NASA: prepare for the worst-and enjoy every moment of it.  In An Astronaut's Guide to Life on Earth, Col. Hadfield takes readers deep into his years of training and space exploration to show how to make the impossible possible. Through eye-opening, entertaining stories filled with the adrenaline of launch, the mesmerizing wonder of spacewalks, and the measured, calm responses mandated by crises, he explains how conventional wisdom can get in the way of achievement-and happiness. His own extraordinary education in space has taught him some counterintuitive lessons: don't visualize success, do care what others think, and always sweat the small stuff.  You might never be able to build a robot, pilot a spacecraft, make a music video or perform basic surgery in zero gravity like Col. Hadfield. But his vivid and refreshing insights will teach you how to think like an astronaut, and will change, completely, the way you view life on Earth-especially your own.",
+      "coverIMG": "https://images.gr-assets.com/books/1380495144l/18170143.jpg",
+      "shelf": "want",
+      "rating": 0
+    },
+    "58": {
+      "title": "Catch-22",
+      "author": "Joseph Heller",
+      "summary": "At the heart of Catch-22 resides the incomparable, malingering bombardier, Yossarian, a hero endlessly inventive in his schemes to save his skin from the horrible chances of war. His problem is Colonel Cathcart, who keeps raising the number of missions the men must fly to complete their service. Yet if Yossarian makes any attempts to excuse himself from the perilous missions that he's committed to flying, he's trapped by the Great Loyalty Oath Crusade, the bureaucratic rule from which the book takes its title: a man is considered insane if he willingly continues to fly dangerous combat missions, but if he makes the necessary formal request to be relieved of such missions, the very act of making the request proves that he's sane and therefore, ineligible to be relieved.",
+      "coverIMG": "https://images.gr-assets.com/books/1463157317l/168668.jpg",
+      "shelf": "",
+      "rating": 0
+    },
+    "59": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "60": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "61": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "62": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "63": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "64": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "65": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "66": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "67": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "68": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "69": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "70": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "71": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "72": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "73": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "74": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "75": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "76": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "77": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "78": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "79": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
+    },
+    "80": {
+      "title": "",
+      "author": "",
+      "summary": "",
+      "coverIMG": "",
+      "shelf": "",
+      "rating": 0
     }
   }
 }

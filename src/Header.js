@@ -15,7 +15,7 @@ const Title = styled.h1`
   font-size: 3em;
   text-align: center;
   padding: 25px;
-  margin: 0 0 25px;
+  margin: 0;
   border-bottom: 12px solid ${c_blue};
   background: ${c_dark};
   a {
@@ -25,23 +25,38 @@ const Title = styled.h1`
 `
 
 const Nav = styled.nav`
-  max-width: 750px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
+  border-bottom: 12px solid ${c_blue};
 `
-const Btn = styled.a`
-  border-radius: 3px;
-  padding: 0.25em 1em;
-  background: transparent;
-  color: ${c_blue};
-  border: 2px solid ${c_blue};
-  text-decoration: none;
-  &:hover {
-    background: ${c_blue};
-    color: ${c_dark};
-    border-color: ${c_dark}
+
+const NavItems = styled.ul`
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  @media screen and (max-width: 450px) {
+    display: block;
   }
+`
+
+const Btn = styled.a`
+  text-decoration: none;
+  color: ${c_dark};
+  display: block;
+  text-align: center;
+  padding: 5px 10px;
+  &:hover {
+    color: ${c_blue};
+  }
+  @media screen and (max-width: 450px) {
+    border 1px solid ${c_blue};
+    &:hover {
+      background: ${c_dark};
+    }
+  }
+  
 `
 
 
@@ -51,9 +66,13 @@ class Header extends Component {
       <TopBar>
         <Title><a href="/">My Books</a></Title>
         <Nav>
-          <Btn href="/shelf/currently-reading">Currently Reading</Btn>
-          <Btn href="/shelf/want-to-read">Want to Read</Btn>
-          <Btn href="/shelf/read">Read</Btn>
+          <NavItems>
+            <li><Btn href="/"><i className="fa fa-home" aria-hidden="true"></i></Btn></li>
+            <li><Btn href="/shelf/currently-reading">Currently Reading</Btn></li>
+            <li><Btn href="/shelf/want-to-read">Want to Read</Btn></li>
+            <li><Btn href="/shelf/read">Read</Btn></li>
+            <li><Btn href="/serach"><i className="fa fa-search" aria-hidden="true"></i></Btn></li>
+          </NavItems>
         </Nav>
       </TopBar>
     );

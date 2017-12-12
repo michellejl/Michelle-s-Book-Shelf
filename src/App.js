@@ -41,6 +41,11 @@ class App extends Component {
     })
   }
 
+  reRender = () => {
+    this.componentDidMount()
+    console.log('happened')
+  }
+
   render() {
 
     // let currentBooks = this.state.books.filter((book) => book.shelf === 'read')
@@ -53,13 +58,16 @@ class App extends Component {
           <Container>
             <Shelf
               books={this.state.current}
-              shelf='Currently Reading' />
+              shelf='Currently Reading'
+              refresh={this.reRender} />
             <Shelf
               books={this.state.want}
-              shelf='Want to Read' />
+              shelf='Want to Read'
+              refresh={this.reRender} />
             <Shelf
               books={this.state.read}
-              shelf='Read' />
+              shelf='Read'
+              refresh={this.reRender} />
           </Container>
         )} />
         <Route path="/shelf/currently-reading" render={() => (

@@ -53,6 +53,7 @@ class MoveMenu extends Component {
       selectedOption: e.target.value
     }, () => {
       updateShelf(this.state.bookID, this.state.selectedOption)
+      this.props.refresh()
     });
   }
 

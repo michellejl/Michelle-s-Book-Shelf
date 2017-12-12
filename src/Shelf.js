@@ -21,9 +21,9 @@ const ShelfTitle = styled.h2`
 
 class Shelf extends Component {
 
-  state = {
+  state = {}
 
-  }
+
 
   render() {
 
@@ -32,7 +32,7 @@ class Shelf extends Component {
         <ShelfTitle>{this.props.shelf}</ShelfTitle>
 
         {this.props.books.map((book) => (
-          <SimpleBook key={book[0]} bookID={book[0]} book={book[1]} />
+          <SimpleBook key={book[0]} bookID={book[0]} book={book[1]} refresh={this.props.refresh} />
         ))}
       </BookShelf>
     );

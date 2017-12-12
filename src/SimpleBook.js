@@ -70,7 +70,8 @@ class SimpleBook extends Component {
           <MoveMenu
             shelf={book.shelf}
             bookID={bookID}
-            book={book} />
+            book={book}
+            refresh={this.props.refresh} />
         ) : (<div></div>)}
 
         <BookDetails>

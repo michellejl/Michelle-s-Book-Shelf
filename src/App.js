@@ -107,7 +107,7 @@ class App extends Component {
         )} />
         <Route path="/search" render={() => (
           <Container>
-            <SearchForm books={this.state.books} />
+            <SearchForm books={this.state.books} refresh={this.reRender} />
           </Container>
         )} />
         <Route path="/book/" render={() => (

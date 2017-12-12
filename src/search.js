@@ -59,7 +59,8 @@ class SearchForm extends Component {
 
         <Shelf
           books={showingBooks}
-          shelf='' />
+          shelf=''
+          refresh={this.props.refresh} />
       </div>
     );
   }

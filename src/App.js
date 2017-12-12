@@ -5,6 +5,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Shelf from './Shelf'
 import AddBookForm from './AddBookForm'
+import SearchForm from './search'
 import firebase from './firebase'
 
 const Container = styled.div`
@@ -47,9 +48,6 @@ class App extends Component {
   }
 
   render() {
-
-    // let currentBooks = this.state.books.filter((book) => book.shelf === 'read')
-
 
     return (
       <div className="App">
@@ -94,6 +92,11 @@ class App extends Component {
         <Route path="/add" render={() => (
           <Container>
             <AddBookForm />
+          </Container>
+        )} />
+        <Route path="/search" render={() => (
+          <Container>
+            <SearchForm books={this.state.books} />
           </Container>
         )} />
         <Footer />

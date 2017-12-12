@@ -71,7 +71,7 @@ class Header extends Component {
             <li><Btn href="/shelf/currently-reading">Currently Reading</Btn></li>
             <li><Btn href="/shelf/want-to-read">Want to Read</Btn></li>
             <li><Btn href="/shelf/read">Read</Btn></li>
-            <li><Btn href="/serach"><i className="fa fa-search" aria-hidden="true"></i></Btn></li>
+            <li><Btn href="/search"><i className="fa fa-search" aria-hidden="true"></i></Btn></li>
           </NavItems>
         </Nav>
       </TopBar>

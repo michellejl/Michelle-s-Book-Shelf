@@ -11,6 +11,9 @@ You should be able to set this project up fairly easily. I used Yarn.
 1. Run ```yarn install``` to download the dependencies
 1. Run ```yarn start``` to run the app. This should open a webpage up to [http://localhost:3000/](http://localhost:3000/) where you will see the app running.
 
+## Use of Images / Text
+* All images of book covers and summary text comes from [GoodReads](https://www.goodreads.com)
+
 ## Extras
 1. I am using [Styled Components](https://www.styled-components.com/) to write custom styling for this application.
 

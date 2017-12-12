@@ -44,7 +44,13 @@ class App extends Component {
 
   reRender = () => {
     this.componentDidMount()
-    console.log('happened')
+  }
+
+  createBook(book) {
+    var newPostKey = firebase.database().ref().child('books').push().key;
+    var updates = {};
+    updates['/books/' + newPostKey] = book;
+    firebase.database().ref().update(updates)
   }
 
   render() {
@@ -89,9 +95,13 @@ class App extends Component {
               shelf='Read' />
           </Container>
         )} />
-        <Route path="/add" render={() => (
+        <Route path="/add" render={({ history }) => (
           <Container>
-            <AddBookForm />
+            <AddBookForm createBook={(book) => {
+              this.createBook(book)
+              history.push('/')
+              this.componentDidMount()
+            }} />
           </Container>
         )} />
         <Route path="/search" render={() => (

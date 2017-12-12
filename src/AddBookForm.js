@@ -76,12 +76,23 @@ const Button = styled.input`
 `
 
 class AddBookForm extends Component {
+
+  state = {
+    selectedShelf: '',
+  }
+
   handleSubmit = (e) => {
     e.preventDefault()
     const values = serializeForm(e.target, { hash: true })
     if (values) {
-      this.props.onCreateContact(values)
+      this.props.createBook(values)
     }
+  }
+
+  handleOptionChange = (e) => {
+    this.setState({
+      selectedShelf: e.target.value
+    });
   }
 
   render() {
@@ -95,15 +106,46 @@ class AddBookForm extends Component {
           <TextArea cols="30" rows="5" name="summary" placeholder="Summary" />
 
           <Shelf>
-            <div className="option">
-              <input type="radio" name="shelf" value="current" checked /> Currently Reading
-            </div>
-            <div className="option">
-              <input type="radio" name="shelf" value="want" /> Want to Read
-            </div>
-            <div className="option">
-              <input type="radio" name="shelf" value="read" /> Read
-            </div>
+            <label>
+              <input
+                type="radio"
+                name="shelf"
+                value="current"
+                checked={this.state.selectedShelf === 'current'}
+                onChange={this.handleOptionChange}
+              />
+              Currently Reading
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="shelf"
+                value="want"
+                checked={this.state.selectedShelf === 'want'}
+                onChange={this.handleOptionChange}
+              />
+              Want to Read
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="shelf"
+                value="read"
+                checked={this.state.selectedShelf === 'read'}
+                onChange={this.handleOptionChange}
+              />
+              Read
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="shelf"
+                value="none"
+                checked={this.state.selectedShelf === 'none'}
+                onChange={this.handleOptionChange}
+              />
+              None
+            </label>
           </Shelf>
 
           <Button type="submit" value="Submit" />

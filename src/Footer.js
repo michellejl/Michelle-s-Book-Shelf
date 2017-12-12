@@ -19,13 +19,16 @@ background: ${c_dark}
 const Link = styled.a`
   color: ${c_orange};
   text-decoration: none;
+  padding: 10px;
 `
 
 class Footer extends Component {
   render() {
     return (
       <BottomBar>
-        <Link href="/add">Add a Book</Link>
+        <Link href="/">Home</Link> |
+        <Link href="/add">Add a Book</Link> |
+        <Link href="/search">Search</Link>
       </BottomBar>
     );
   }

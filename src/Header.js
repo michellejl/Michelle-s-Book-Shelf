@@ -7,10 +7,6 @@ var c_blue = '#5AB9CF'
 // var c_orange = '#F04D32'
 var c_dark = '#3B3F42'
 
-
-const TopBar = styled.header`
-
-`
 const Title = styled.h1`
   font-size: 3em;
   text-align: center;
@@ -56,14 +52,13 @@ const Btn = styled.a`
       background: ${c_dark};
     }
   }
-  
+ 
 `
-
 
 class Header extends Component {
   render() {
     return (
-      <TopBar>
+      <header>
         <Title><a href="/">My Books</a></Title>
         <Nav>
           <NavItems>
@@ -74,7 +69,7 @@ class Header extends Component {
             <li><Btn href="/search"><i className="fa fa-search" aria-hidden="true"></i></Btn></li>
           </NavItems>
         </Nav>
-      </TopBar>
+      </header>
     );
   }
 }

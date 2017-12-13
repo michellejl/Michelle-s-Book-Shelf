@@ -1,14 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import MoveMenu from './MoveMenu'
 import firebase from './firebase'
-
-
-var c_blue = '#5AB9CF'
-// var c_white = '#FEFEFE'
-// var c_yellow = '#FAB94E'
-// var c_orange = '#F04D32'
-// var c_dark = '#3B3F42'
 
 const Book = styled.div`
   display: flex;
@@ -43,16 +35,6 @@ const Cover = styled.img`
 const BookImage = styled.div`
   margin-right: 25px;
 `
-
-const Icon = styled.i`
-  color: ${c_blue};
-  font-size: 2em;
-  margin: -.5em;
-  &:hover {
-    cursor: pointer;
-  }
-`
-
 class AllDetails extends Component {
 
   currentURL = window.location.href
@@ -75,38 +57,18 @@ class AllDetails extends Component {
     })
   }
 
-  menuClickHandler = () => {
-    if (this.state.menuOpen === true) {
-      this.setState({ menuOpen: false })
-    } else {
-      this.setState({ menuOpen: true })
-    }
-  }
-
   render() {
-    const { book, bookID } = this.state
+    const { book } = this.state
     return (
       <Book>
         <BookImage>
           <Cover alt="" src={book.coverIMG} />
-
-          <Icon onClick={this.menuClickHandler}>
-            <i className="fa fa-chevron-circle-down" aria-hidden="true"></i>
-          </Icon>
-          {this.state.menuOpen ? (
-            <MoveMenu
-              shelf={book.shelf}
-              bookID={bookID}
-              book={book}
-              refresh={this.props.refresh} />
-          ) : (<div></div>)}
         </BookImage>
 
         <BookDetails>
           <p className="book-title">{book.title}</p>
           <p className="book-author">{book.author}</p>
           <p className="book-summary">{book.summary}</p>
-
         </BookDetails>
       </Book>
     );

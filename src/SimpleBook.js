@@ -60,7 +60,7 @@ class SimpleBook extends Component {
     const bookID = this.props.bookID
 
     return (
-      <Book>
+      <Book key="bookID">
 
         <a href={'/book/' + bookID}>
           <Cover alt="" src={book.coverIMG} />

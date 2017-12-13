@@ -63,11 +63,10 @@ class App extends Component {
 
   setUserStatus = (status) => {
     this.setState({ user: status })
-    console.log(this.state.user)
+    console.log('loggedin')
   }
 
   render() {
-
 
     return (
       <div className="App">

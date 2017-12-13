@@ -34,7 +34,7 @@ class App extends Component {
     }).then((books) => {
       AllBooks = Object.keys(AllBooks).map((key) => [Number(key), AllBooks[key]]);
       let current = [], read = [], want = []
-      let sortingBooks = AllBooks.map((book) => {
+      AllBooks.map((book) => {
         if (book[1].shelf === 'current') { current.push(book) }
         if (book[1].shelf === 'want') { want.push(book) }
         if (book[1].shelf === 'read') { read.push(book) }

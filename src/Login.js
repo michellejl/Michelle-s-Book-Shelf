@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import serializeForm from 'form-serialize'
 import styled from 'styled-components'
+import firebase from './firebase'
 
 var c_blue = '#5AB9CF'
 var c_white = '#FEFEFE'
@@ -58,20 +59,27 @@ line-height: 40px;
 
 class Login extends Component {
   state = {
-    query: ''
+    errorMessage: '',
   }
+
 
   handleSubmit = (e) => {
     e.preventDefault()
     const values = serializeForm(e.target, { hash: true })
-    console.log('things are happening')
-    console.dir(values)
+    const email = values.email
+    const password = values.password
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+      // var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(errorMessage)
+    });
   }
 
   render() {
 
     return (
       <AddForm onSubmit={this.handleSubmit}>
+        <p>{this.state.errorMessage}</p>
         <Fieldset>
           <Legend>Login</Legend>
           <InputField type="text" name="email" placeholder="Email" required />

@@ -17,7 +17,7 @@ You should be able to set this project up fairly easily. I used Yarn.
 ## Extras
 1. I am using [Styled Components](https://www.styled-components.com/) to write custom styling for this application.
 1. I am using Firebase to create and maintain my own database of books
-1. I have added a form to add a new book to my database
+1. I have added a form to add a new book to my database. This feature is only available when a user is logged in
 
 ## Things I want to add later:
 1. Edit book information from within app

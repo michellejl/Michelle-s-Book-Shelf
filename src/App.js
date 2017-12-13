@@ -45,6 +45,8 @@ class App extends Component {
       })
       this.setState({ books: AllBooks, current, want, read, none })
     })
+
+
   }
 
   reRender = () => {
@@ -59,6 +61,11 @@ class App extends Component {
   }
 
   render() {
+
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) { console.log('in') }
+      else { console.log('out') }
+    });
 
     return (
       <div className="App">

@@ -23,7 +23,7 @@ class App extends Component {
     want: [],
     read: [],
     none: [],
-    loggedin: true
+    loggedin: false
   }
 
   componentDidMount() {

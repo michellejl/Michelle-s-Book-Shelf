@@ -20,7 +20,8 @@ class App extends Component {
     books: [],
     current: [],
     want: [],
-    read: []
+    read: [],
+    none: []
   }
 
   componentDidMount() {
@@ -33,13 +34,14 @@ class App extends Component {
       console.log("The read failed: " + errorObject.code);
     }).then((books) => {
       AllBooks = Object.keys(AllBooks).map((key) => [Number(key), AllBooks[key]]);
-      let current = [], read = [], want = []
+      let current = [], read = [], want = [], none = []
       AllBooks.map((book) => {
         if (book[1].shelf === 'current') { current.push(book) }
-        if (book[1].shelf === 'want') { want.push(book) }
-        if (book[1].shelf === 'read') { read.push(book) }
+        else if (book[1].shelf === 'want') { want.push(book) }
+        else if (book[1].shelf === 'read') { read.push(book) }
+        else { none.push(book) }
       })
-      this.setState({ books: AllBooks, current, want, read })
+      this.setState({ books: AllBooks, current, want, read, none })
     })
   }
 
@@ -72,6 +74,10 @@ class App extends Component {
             <Shelf
               books={this.state.read}
               shelf='Read'
+              refresh={this.reRender} />
+            <Shelf
+              books={this.state.none}
+              shelf='Not Shelved'
               refresh={this.reRender} />
           </Container>
         )} />

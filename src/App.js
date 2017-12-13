@@ -23,7 +23,7 @@ class App extends Component {
     want: [],
     read: [],
     none: [],
-    loggedin: false
+    user: false
   }
 
   componentDidMount() {
@@ -37,6 +37,7 @@ class App extends Component {
     }).then((books) => {
       AllBooks = Object.keys(AllBooks).map((key) => [Number(key), AllBooks[key]]);
       let current = [], read = [], want = [], none = []
+      // eslint-disable-next-line
       AllBooks.map((book) => {
         if (book[1].shelf === 'current') { current.push(book) }
         else if (book[1].shelf === 'want') { want.push(book) }
@@ -60,12 +61,13 @@ class App extends Component {
     firebase.database().ref().update(updates)
   }
 
+  setUserStatus = (status) => {
+    this.setState({ user: status })
+    console.log(this.state.user)
+  }
+
   render() {
 
-    firebase.auth().onAuthStateChanged(function (user) {
-      if (user) { console.log('in') }
-      else { console.log('out') }
-    });
 
     return (
       <div className="App">
@@ -120,9 +122,14 @@ class App extends Component {
             }} />
           </Container>
         )} />
-        <Route path="/login" render={() => (
+        <Route path="/login" render={({ history }) => (
           <Container>
-            <Login />
+            <Login setUserStatus={(userStatus) => {
+              this.setUserStatus(userStatus)
+              history.push('/')
+              this.componentDidMount()
+            }}
+              currentStatus={this.state.user} />
           </Container>
         )} />
         <Route path="/search" render={() => (
@@ -135,7 +142,7 @@ class App extends Component {
             <AllDetails />
           </Container>
         )} />
-        <Footer loggedin={this.state.loggedin} />
+        <Footer loggedin={this.state.user} />
       </div>
     );
   }

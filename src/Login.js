@@ -60,7 +60,9 @@ line-height: 40px;
 class Login extends Component {
   state = {
     errorMessage: '',
+    userStatus: this.props.currentStatus
   }
+
 
 
   handleSubmit = (e) => {
@@ -72,14 +74,19 @@ class Login extends Component {
       // var errorCode = error.code;
       var errorMessage = error.message;
       alert(errorMessage)
+    }).then((result) => {
+      this.setState({ userStatus: true })
+      this.props.setUserStatus(true)
     });
   }
+
 
   render() {
 
     return (
       <AddForm onSubmit={this.handleSubmit}>
         <p>{this.state.errorMessage}</p>
+        <p>{this.state.userStatus + ' '}</p>
         <Fieldset>
           <Legend>Login</Legend>
           <InputField type="text" name="email" placeholder="Email" required />

@@ -7,6 +7,7 @@ import Shelf from './Shelf'
 import AddBookForm from './AddBookForm'
 import SearchForm from './search'
 import AllDetails from './BookDetails'
+import Login from './Login'
 import firebase from './firebase'
 
 const Container = styled.div`
@@ -21,7 +22,8 @@ class App extends Component {
     current: [],
     want: [],
     read: [],
-    none: []
+    none: [],
+    loggedin: true
   }
 
   componentDidMount() {
@@ -111,6 +113,11 @@ class App extends Component {
             }} />
           </Container>
         )} />
+        <Route path="/login" render={() => (
+          <Container>
+            <Login />
+          </Container>
+        )} />
         <Route path="/search" render={() => (
           <Container>
             <SearchForm books={this.state.books} refresh={this.reRender} />
@@ -121,7 +128,7 @@ class App extends Component {
             <AllDetails />
           </Container>
         )} />
-        <Footer />
+        <Footer loggedin={this.state.loggedin} />
       </div>
     );
   }

@@ -23,11 +23,21 @@ const Link = styled.a`
 `
 
 class Footer extends Component {
+  state = {
+    loggedin: this.props.loggedin
+  }
+
   render() {
+    let link
+    if (this.state.loggedin) {
+      link = <Link href="/add">Add a Book</Link>
+    } else {
+      link = <Link href="/login">Login</Link>
+    }
     return (
       <BottomBar>
         <Link href="/">Home</Link> |
-        <Link href="/add">Add a Book</Link> |
+        {link} |
         <Link href="/search">Search</Link>
       </BottomBar>
     );

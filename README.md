@@ -24,6 +24,10 @@ You should be able to set this project up fairly easily. I used Yarn.
 1. Form for people to recommend books for me to read
 1. Add a way for books to be sorted by author name
 1. Display my rating
+1. Remove a book from the app
+1. User login so that not everyone can edit the shelf of books or add books
+1. Add a 'more by author' section to book details page
+1. Live deploy site (need user login/authentication first!)
 
 ___________________
 

@@ -44,21 +44,7 @@ class App extends Component {
     read: [],
     none: []
   }
-
-  componentDidMount() {
-    this.removeListener = fbAuth().onAuthStateChanged((user) => {
-      if (user) {
-        this.setState({
-          authed: true,
-          loading: false,
-        })
-      } else {
-        this.setState({
-          authed: false,
-          loading: false
-        })
-      }
-    })
+  componentWillMount() {
     let AllBooks
     dbRefBooks.once("value", function (snapshot) {
       AllBooks = snapshot.val();
@@ -75,6 +61,22 @@ class App extends Component {
         else { none.push(book) }
       })
       this.setState({ books: AllBooks, current, want, read, none })
+    })
+  }
+
+  componentDidMount() {
+    this.removeListener = fbAuth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({
+          authed: true,
+          loading: false,
+        })
+      } else {
+        this.setState({
+          authed: false,
+          loading: false
+        })
+      }
     })
   }
   componentWillUnmount() {

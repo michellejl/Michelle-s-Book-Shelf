@@ -61,14 +61,17 @@ class SimpleBook extends Component {
 
     return (
       <Book key={bookID}>
-
         <a href={'/book/' + bookID}>
           <Cover alt="" src={book.coverIMG} />
         </a>
 
-        <Icon onClick={this.menuClickHandler}>
-          <i className="fa fa-chevron-circle-down" aria-hidden="true"></i>
-        </Icon>
+        {this.props.authed
+          ? (
+            <Icon onClick={this.menuClickHandler}>
+              <i className="fa fa-chevron-circle-down" aria-hidden="true"></i>
+            </Icon>
+          )
+          : (<span></span>)}
         {this.state.menuOpen ? (
           <MoveMenu
             shelf={book.shelf}
@@ -77,10 +80,10 @@ class SimpleBook extends Component {
             refresh={this.props.refresh} />
         ) : (<div></div>)}
 
+
         <BookDetails>
           <p className="book-title">{book.title}</p>
           <p className="book-author">{book.author}</p>
-
         </BookDetails>
       </Book>
     );

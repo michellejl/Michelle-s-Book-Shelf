@@ -29,7 +29,7 @@ function PrivateRoute({ component: Component, authed, ...rest }) {
 function PublicRoute({ component: Component, authed, ...rest }) {
   return (
     <Route
-      render={(props) => <Component {...props} {...rest} />}
+      render={(props) => <Component {...props} {...rest} authed={authed} />}
     />
   )
 }
@@ -101,14 +101,14 @@ class App extends Component {
           <Container>
             <Switch>
               <PublicRoute
-                authed={this.state.authed}
                 path='/' exact
                 component={Home}
                 current={this.state.current}
                 want={this.state.want}
                 read={this.state.read}
                 none={this.state.none}
-                refresh={this.reRender} />
+                refresh={this.reRender}
+                authed={this.state.authed} />
               <PublicRoute
                 authed={this.state.authed}
                 path='/search'
@@ -128,32 +128,6 @@ class App extends Component {
 export default App;
 
 {/* 
-<Header />
-<p>{"Logged in: " + this.state.user}</p>
-<Route exact path="/" render={() => (
-  <Home />
-)} />
-<Route path="/shelf/currently-reading" render={() => (
-  <Container>
-    <Shelf
-      books={this.state.current}
-      shelf='Currently Reading' />
-  </Container>
-)} />
-<Route path="/shelf/want-to-read" render={() => (
-  <Container>
-    <Shelf
-      books={this.state.want}
-      shelf='Want to Read' />
-  </Container>
-)} />
-<Route path="/shelf/read" render={() => (
-  <Container>
-    <Shelf
-      books={this.state.read}
-      shelf='Read' />
-  </Container>
-)} />
 <Route path="/add" render={({ history }) => (
   <Container>
     {this.props.currentStatus ?
@@ -177,11 +151,7 @@ export default App;
       currentStatus={this.state.user} />
   </Container>
 )} />
-<Route path="/search" render={() => (
-  <Container>
-    <SearchForm books={this.state.books} refresh={this.reRender} />
-  </Container>
-)} />
+
 <Route path="/book/" render={() => (
   <Container>
     <AllDetails />

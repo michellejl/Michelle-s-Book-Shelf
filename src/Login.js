@@ -10,6 +10,8 @@ var c_white = '#FEFEFE'
 var c_dark = '#3B3F42'
 
 const AddForm = styled.form`
+  max-width: 500px;
+  margin: 0 auto;
 
 `
 const Fieldset = styled.fieldset`
@@ -63,8 +65,6 @@ class Login extends Component {
     userStatus: this.props.currentStatus
   }
 
-
-
   handleSubmit = (e) => {
     e.preventDefault()
     const values = serializeForm(e.target, { hash: true })
@@ -79,7 +79,6 @@ class Login extends Component {
       this.props.setUserStatus(true)
     });
   }
-
 
   render() {
 

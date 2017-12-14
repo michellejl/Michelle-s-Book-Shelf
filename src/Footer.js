@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Login from './Login'
 
 var c_blue = '#5AB9CF'
 // var c_white = '#FEFEFE'
@@ -24,21 +25,23 @@ const Link = styled.a`
 
 class Footer extends Component {
   state = {
-    loggedin: this.props.loggedin
+    // loggedin: this.props.loggedin
   }
 
   render() {
-    let link
-    if (this.state.loggedin) {
-      link = <Link href="/add">Add a Book</Link>
-    } else {
-      link = <Link href="/login">Login</Link>
-    }
+
     return (
       <BottomBar>
         <Link href="/">Home</Link> |
-        {link} |
+        <Link href="/add">Add a Book</Link> |
         <Link href="/search">Search</Link>
+        <br />
+        <br />
+        {this.props.currentStatus ?
+          <button>Log Out</button>
+          :
+          <Login />
+        }
       </BottomBar>
     );
   }

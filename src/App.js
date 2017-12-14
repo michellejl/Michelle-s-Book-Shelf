@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
+import React, { Component } from 'react'
+import { Route, Redirect } from 'react-router-dom'
 import styled from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
+import Home from './Home'
 import Shelf from './Shelf'
 import AddBookForm from './AddBookForm'
 import SearchForm from './search'
 import AllDetails from './BookDetails'
 import Login from './Login'
-import firebase from './firebase'
+import firebase, { fbAuth, dbRefBooks, ref } from './firebase'
 
 const Container = styled.div`
   margin: 25px auto;
@@ -16,135 +17,158 @@ const Container = styled.div`
   max-width: 750px;
 `
 
+function PrivateRoute({ component: Component, authed, ...rest }) {
+  return (
+    <Route
+      {...rest}
+      render={(props) => authed === true
+        ? <Component {...props} />
+        : <Redirect to={{ pathname: '/login', state: { from: props.location } }} />}
+    />
+  )
+}
+
+function PublicRoute({ component: Component, authed, ...rest }) {
+  return (
+    <Route
+      {...rest}
+      render={(props) => authed === false
+        ? <Component {...props} />
+        : <Redirect to='/dashboard' />}
+    />
+  )
+}
+
 class App extends Component {
   state = {
+    authed: false,
+    loading: true,
+
     books: [],
     current: [],
     want: [],
     read: [],
     none: [],
-    user: false
+    user: null
   }
 
   componentDidMount() {
-    const dbRef = firebase.database().ref("books/")
-
-    let AllBooks
-    dbRef.once("value", function (snapshot) {
-      AllBooks = snapshot.val();
-    }, function (errorObject) {
-      console.log("The read failed: " + errorObject.code);
-    }).then((books) => {
-      AllBooks = Object.keys(AllBooks).map((key) => [Number(key), AllBooks[key]]);
-      let current = [], read = [], want = [], none = []
-      // eslint-disable-next-line
-      AllBooks.map((book) => {
-        if (book[1].shelf === 'current') { current.push(book) }
-        else if (book[1].shelf === 'want') { want.push(book) }
-        else if (book[1].shelf === 'read') { read.push(book) }
-        else { none.push(book) }
-      })
-      this.setState({ books: AllBooks, current, want, read, none })
+    this.removeListener = fbAuth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({
+          authed: true,
+          loading: false,
+        })
+      } else {
+        this.setState({
+          authed: false,
+          loading: false
+        })
+      }
     })
-
-
+    // let AllBooks
+    // dbRefBooks.once("value", function (snapshot) {
+    //   AllBooks = snapshot.val();
+    // }, function (errorObject) {
+    //   console.log("The read failed: " + errorObject.code);
+    // }).then((books) => {
+    //   AllBooks = Object.keys(AllBooks).map((key) => [Number(key), AllBooks[key]]);
+    //   let current = [], read = [], want = [], none = []
+    //   // eslint-disable-next-line
+    //   AllBooks.map((book) => {
+    //     if (book[1].shelf === 'current') { current.push(book) }
+    //     else if (book[1].shelf === 'want') { want.push(book) }
+    //     else if (book[1].shelf === 'read') { read.push(book) }
+    //     else { none.push(book) }
+    //   })
+    //   this.setState({ books: AllBooks, current, want, read, none })
+    // })
+  }
+  componentWillUnmount() {
+    this.removeListener()
   }
 
-  reRender = () => {
-    this.componentDidMount()
-  }
+  // reRender = () => {
+  //   this.componentDidMount()
+  // }
 
-  createBook(book) {
-    var newPostKey = firebase.database().ref().child('books').push().key;
-    var updates = {};
-    updates['/books/' + newPostKey] = book;
-    firebase.database().ref().update(updates)
-  }
-
-  setUserStatus = (status) => {
-    this.setState({ user: status })
-    console.log('loggedin')
-  }
+  // createBook(book) {
+  //   var newPostKey = firebase.database().ref().child('books').push().key;
+  //   var updates = {};
+  //   updates['/books/' + newPostKey] = book;
+  //   firebase.database().ref().update(updates)
+  // }
 
   render() {
 
-    return (
+    return this.state.loading === true ? <h1>Loading...</h1> : (
       <div className="App">
-        <Header />
-        <Route exact path="/" render={() => (
-          <Container>
-            <Shelf
-              books={this.state.current}
-              shelf='Currently Reading'
-              refresh={this.reRender} />
-            <Shelf
-              books={this.state.want}
-              shelf='Want to Read'
-              refresh={this.reRender} />
-            <Shelf
-              books={this.state.read}
-              shelf='Read'
-              refresh={this.reRender} />
-            <Shelf
-              books={this.state.none}
-              shelf='Not Shelved'
-              refresh={this.reRender} />
-          </Container>
-        )} />
-        <Route path="/shelf/currently-reading" render={() => (
-          <Container>
-            <Shelf
-              books={this.state.current}
-              shelf='Currently Reading' />
-          </Container>
-        )} />
-        <Route path="/shelf/want-to-read" render={() => (
-          <Container>
-            <Shelf
-              books={this.state.want}
-              shelf='Want to Read' />
-          </Container>
-        )} />
-        <Route path="/shelf/read" render={() => (
-          <Container>
-            <Shelf
-              books={this.state.read}
-              shelf='Read' />
-          </Container>
-        )} />
-        <Route path="/add" render={({ history }) => (
-          <Container>
-            <AddBookForm createBook={(book) => {
-              this.createBook(book)
-              history.push('/')
-              this.componentDidMount()
-            }} />
-          </Container>
-        )} />
-        <Route path="/login" render={({ history }) => (
-          <Container>
-            <Login setUserStatus={(userStatus) => {
-              this.setUserStatus(userStatus)
-              history.push('/')
-              this.componentDidMount()
-            }}
-              currentStatus={this.state.user} />
-          </Container>
-        )} />
-        <Route path="/search" render={() => (
-          <Container>
-            <SearchForm books={this.state.books} refresh={this.reRender} />
-          </Container>
-        )} />
-        <Route path="/book/" render={() => (
-          <Container>
-            <AllDetails />
-          </Container>
-        )} />
-        <Footer loggedin={this.state.user} />
+        <h1>Loaded</h1>
       </div>
     );
   }
 }
 
 export default App;
+
+{/* 
+<Header />
+<p>{"Logged in: " + this.state.user}</p>
+<Route exact path="/" render={() => (
+  <Home />
+)} />
+<Route path="/shelf/currently-reading" render={() => (
+  <Container>
+    <Shelf
+      books={this.state.current}
+      shelf='Currently Reading' />
+  </Container>
+)} />
+<Route path="/shelf/want-to-read" render={() => (
+  <Container>
+    <Shelf
+      books={this.state.want}
+      shelf='Want to Read' />
+  </Container>
+)} />
+<Route path="/shelf/read" render={() => (
+  <Container>
+    <Shelf
+      books={this.state.read}
+      shelf='Read' />
+  </Container>
+)} />
+<Route path="/add" render={({ history }) => (
+  <Container>
+    {this.props.currentStatus ?
+      <AddBookForm createBook={(book) => {
+        this.createBook(book)
+        history.push('/')
+        this.componentDidMount()
+      }} />
+      :
+      <p>You must be logged in to add a new book.</p>
+    }
+  </Container>
+)} />
+<Route path="/login" render={({ history }) => (
+  <Container>
+    <Login setUserStatus={(userStatus) => {
+      this.setUserStatus(userStatus)
+      history.push('/')
+      this.componentDidMount()
+    }}
+      currentStatus={this.state.user} />
+  </Container>
+)} />
+<Route path="/search" render={() => (
+  <Container>
+    <SearchForm books={this.state.books} refresh={this.reRender} />
+  </Container>
+)} />
+<Route path="/book/" render={() => (
+  <Container>
+    <AllDetails />
+  </Container>
+)} />
+<Footer loggedin={this.state.user} /> */}

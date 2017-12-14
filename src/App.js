@@ -84,7 +84,7 @@ class App extends Component {
   }
 
   reRender = () => {
-    this.componentDidMount()
+    this.componentWillMount()
   }
 
   // createBook(book) {

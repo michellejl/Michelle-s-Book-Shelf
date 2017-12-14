@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Route, Redirect, BrowserRouter } from 'react-router-dom'
+import { Route, Redirect, BrowserRouter, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
-// import Home from './Home'
+import Home from './Home'
 // import Shelf from './Shelf'
 // import AddBookForm from './AddBookForm'
 // import SearchForm from './search'
@@ -31,10 +31,7 @@ function PrivateRoute({ component: Component, authed, ...rest }) {
 function PublicRoute({ component: Component, authed, ...rest }) {
   return (
     <Route
-      {...rest}
-      render={(props) => authed === false
-        ? <Component {...props} />
-        : <Redirect to='/dashboard' />}
+      render={(props) => <Component {...props} {...rest} />}
     />
   )
 }
@@ -66,31 +63,31 @@ class App extends Component {
         })
       }
     })
-    // let AllBooks
-    // dbRefBooks.once("value", function (snapshot) {
-    //   AllBooks = snapshot.val();
-    // }, function (errorObject) {
-    //   console.log("The read failed: " + errorObject.code);
-    // }).then((books) => {
-    //   AllBooks = Object.keys(AllBooks).map((key) => [Number(key), AllBooks[key]]);
-    //   let current = [], read = [], want = [], none = []
-    //   // eslint-disable-next-line
-    //   AllBooks.map((book) => {
-    //     if (book[1].shelf === 'current') { current.push(book) }
-    //     else if (book[1].shelf === 'want') { want.push(book) }
-    //     else if (book[1].shelf === 'read') { read.push(book) }
-    //     else { none.push(book) }
-    //   })
-    //   this.setState({ books: AllBooks, current, want, read, none })
-    // })
+    let AllBooks
+    dbRefBooks.once("value", function (snapshot) {
+      AllBooks = snapshot.val();
+    }, function (errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    }).then((books) => {
+      AllBooks = Object.keys(AllBooks).map((key) => [Number(key), AllBooks[key]]);
+      let current = [], read = [], want = [], none = []
+      // eslint-disable-next-line
+      AllBooks.map((book) => {
+        if (book[1].shelf === 'current') { current.push(book) }
+        else if (book[1].shelf === 'want') { want.push(book) }
+        else if (book[1].shelf === 'read') { read.push(book) }
+        else { none.push(book) }
+      })
+      this.setState({ books: AllBooks, current, want, read, none })
+    })
   }
   componentWillUnmount() {
     this.removeListener()
   }
 
-  // reRender = () => {
-  //   this.componentDidMount()
-  // }
+  reRender = () => {
+    this.componentDidMount()
+  }
 
   // createBook(book) {
   //   var newPostKey = firebase.database().ref().child('books').push().key;
@@ -106,6 +103,17 @@ class App extends Component {
         <div className="app">
           <Header />
           <Container>
+            <Switch>
+              <PublicRoute
+                authed={this.state.authed}
+                path='/' exact
+                component={Home}
+                current={this.state.current}
+                want={this.state.want}
+                read={this.state.read}
+                none={this.state.none}
+                refresh={this.reRender} />
+            </Switch>
           </Container>
           <Footer authed={this.state.authed} />
         </div>

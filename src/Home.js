@@ -6,9 +6,32 @@ class Home extends Component {
     return (
       <div>
         <Shelf
-          books={this.state.current}
+          books={this.props.current}
           shelf='Currently Reading'
-          refresh={this.reRender} />
+          refresh={this.props.reRender} />
+        <Shelf
+          books={this.props.want}
+          shelf='Want to Read'
+          refresh={this.props.reRender} />
+        <Shelf
+          books={this.props.read}
+          shelf='Read'
+          refresh={this.props.reRender} />
+        <Shelf
+          books={this.props.none}
+          shelf='Not Shelved'
+          refresh={this.props.reRender} />
+      </div>
+    )
+  }
+}
+
+export default Home
+
+{/* <Shelf
+          books={this.props.current}
+          shelf='Currently Reading'
+        />
         <Shelf
           books={this.state.want}
           shelf='Want to Read'
@@ -20,10 +43,4 @@ class Home extends Component {
         <Shelf
           books={this.state.none}
           shelf='Not Shelved'
-          refresh={this.reRender} />
-      </div>
-    )
-  }
-}
-
-export default Home
+          refresh={this.reRender} /> */}

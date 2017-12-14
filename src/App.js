@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
 import Home from './Home'
+import BookDetails from './BookDetails'
 // import AddBookForm from './AddBookForm'
 import SearchForm from './search'
 // import Login from './Login'
@@ -44,6 +45,7 @@ class App extends Component {
     read: [],
     none: []
   }
+
   componentWillMount() {
     let AllBooks
     dbRefBooks.once("value", function (snapshot) {
@@ -63,7 +65,6 @@ class App extends Component {
       this.setState({ books: AllBooks, current, want, read, none })
     })
   }
-
   componentDidMount() {
     this.removeListener = fbAuth().onAuthStateChanged((user) => {
       if (user) {
@@ -79,13 +80,8 @@ class App extends Component {
       }
     })
   }
-  componentWillUnmount() {
-    this.removeListener()
-  }
-
-  reRender = () => {
-    this.componentWillMount()
-  }
+  componentWillUnmount() { this.removeListener() }
+  reRender = () => { this.componentWillMount() }
 
   // createBook(book) {
   //   var newPostKey = firebase.database().ref().child('books').push().key;
@@ -95,7 +91,6 @@ class App extends Component {
   // }
 
   render() {
-
     return this.state.loading === true ? <h1>Loading...</h1> : (
       <BrowserRouter>
         <div className="app">
@@ -116,8 +111,12 @@ class App extends Component {
                 path='/search'
                 component={SearchForm}
                 books={this.state.books}
-                refresh={this.reRender}
-              />
+                refresh={this.reRender} />
+              <PublicRoute
+                path='/book/'
+                component={BookDetails} />
+              {/* PRIVATE: ADD */}
+              {/* PUBLIC: LOGIN */}
             </Switch>
           </Container>
           <Footer authed={this.state.authed} />

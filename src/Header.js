@@ -32,7 +32,7 @@ const NavItems = styled.ul`
   justify-content: space-between;
   list-style-type: none;
   font-size: 1.2em;
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     display: block;
   }
 `
@@ -46,7 +46,7 @@ const Btn = styled.a`
   &:hover {
     color: ${c_blue};
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     border 1px solid ${c_dark};
     &:hover {
       background: ${c_dark};
@@ -63,9 +63,10 @@ class Header extends Component {
         <Nav>
           <NavItems>
             <li><Btn href="/"><i className="fa fa-home" aria-hidden="true"></i></Btn></li>
-            <li><Btn href="/shelf/currently-reading">Currently Reading</Btn></li>
-            <li><Btn href="/shelf/want-to-read">Want to Read</Btn></li>
-            <li><Btn href="/shelf/read">Read</Btn></li>
+            <li><Btn href="#current">Currently Reading</Btn></li>
+            <li><Btn href="#want">Want to Read</Btn></li>
+            <li><Btn href="#read">Read</Btn></li>
+            <li><Btn href="#none">Not Shelved</Btn></li>
             <li><Btn href="/search"><i className="fa fa-search" aria-hidden="true"></i></Btn></li>
           </NavItems>
         </Nav>

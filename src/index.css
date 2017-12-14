@@ -3,13 +3,14 @@
 * {
   box-sizing: border-box; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Special Elite', cursive; }
-
 body {
   margin: 0;
   padding: 0;
   color: #3B3F42;
-  background: #FEFEFE; }
+  background: #FEFEFE;
+  font-family: sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Special Elite', cursive; }
 
 /*# sourceMappingURL=index.css.map */

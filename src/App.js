@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import { Route, Redirect, BrowserRouter } from 'react-router-dom'
 import styled from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
-import Home from './Home'
-import Shelf from './Shelf'
-import AddBookForm from './AddBookForm'
-import SearchForm from './search'
-import AllDetails from './BookDetails'
-import Login from './Login'
+// import Home from './Home'
+// import Shelf from './Shelf'
+// import AddBookForm from './AddBookForm'
+// import SearchForm from './search'
+// import AllDetails from './BookDetails'
+// import Login from './Login'
 import firebase, { fbAuth, dbRefBooks, ref } from './firebase'
 
 const Container = styled.div`
@@ -102,9 +102,14 @@ class App extends Component {
   render() {
 
     return this.state.loading === true ? <h1>Loading...</h1> : (
-      <div className="App">
-        <h1>Loaded</h1>
-      </div>
+      <BrowserRouter>
+        <div className="app">
+          <Header />
+          <Container>
+          </Container>
+          <Footer authed={this.state.authed} />
+        </div>
+      </BrowserRouter>
     );
   }
 }

@@ -4,10 +4,8 @@ import styled from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
 import Home from './Home'
-// import Shelf from './Shelf'
 // import AddBookForm from './AddBookForm'
-// import SearchForm from './search'
-// import AllDetails from './BookDetails'
+import SearchForm from './search'
 // import Login from './Login'
 import firebase, { fbAuth, dbRefBooks, ref } from './firebase'
 
@@ -40,13 +38,11 @@ class App extends Component {
   state = {
     authed: false,
     loading: true,
-
     books: [],
     current: [],
     want: [],
     read: [],
-    none: [],
-    user: null
+    none: []
   }
 
   componentDidMount() {
@@ -113,6 +109,13 @@ class App extends Component {
                 read={this.state.read}
                 none={this.state.none}
                 refresh={this.reRender} />
+              <PublicRoute
+                authed={this.state.authed}
+                path='/search'
+                component={SearchForm}
+                books={this.state.books}
+                refresh={this.reRender}
+              />
             </Switch>
           </Container>
           <Footer authed={this.state.authed} />

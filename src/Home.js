@@ -31,20 +31,3 @@ class Home extends Component {
 }
 
 export default Home
-
-{/* <Shelf
-          books={this.props.current}
-          shelf='Currently Reading'
-        />
-        <Shelf
-          books={this.state.want}
-          shelf='Want to Read'
-          refresh={this.reRender} />
-        <Shelf
-          books={this.state.read}
-          shelf='Read'
-          refresh={this.reRender} />
-        <Shelf
-          books={this.state.none}
-          shelf='Not Shelved'
-          refresh={this.reRender} /> */}

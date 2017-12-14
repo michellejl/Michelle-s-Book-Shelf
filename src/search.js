@@ -56,10 +56,9 @@ class SearchForm extends Component {
           placeholder="Search"
           value={query}
           onChange={(event) => this.updateQuery(event.target.value)} />
-
         <Shelf
           books={showingBooks}
-          shelf=''
+          shelf='Matching Books'
           refresh={this.props.refresh} />
       </div>
     );
@@ -69,3 +68,9 @@ class SearchForm extends Component {
 export default SearchForm;
 
 
+{/* 
+
+        <Shelf
+          books={showingBooks}
+          shelf=''
+          refresh={this.props.refresh} /> */}

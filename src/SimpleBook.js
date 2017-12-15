@@ -61,7 +61,7 @@ class SimpleBook extends Component {
 
     return (
       <Book key={bookID}>
-        <a href={'/book/' + bookID}>
+        <a href={'/book/' + String(bookID)}>
           <Cover alt="" src={book.coverIMG} />
         </a>
 
@@ -84,6 +84,8 @@ class SimpleBook extends Component {
         <BookDetails>
           <p className="book-title">{book.title}</p>
           <p className="book-author">{book.author}</p>
+
+          {bookID}
         </BookDetails>
       </Book>
     );

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Login from './Login'
+import { logout } from './authHelpers'
+
 
 var c_blue = '#5AB9CF'
 // var c_white = '#FEFEFE'
@@ -46,8 +48,8 @@ class Footer extends Component {
         <Link href="/add">Add a Book</Link> |
         <Link href="/search">Search</Link> |
         {this.props.authed
-          ? <Button onClick={() => { console.log('logout()') }} >Logout</Button>
-          : <Link to="/login">Login</Link>
+          ? <Button onClick={() => { logout() }} >Logout</Button>
+          : <Link href="/login">Login</Link>
         }
       </BottomBar>
     );

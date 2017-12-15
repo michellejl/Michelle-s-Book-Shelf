@@ -46,6 +46,7 @@ class AllDetails extends Component {
 
   componentDidMount() {
     const dbRef = firebase.database().ref("books/" + this.state.bookID)
+    console.log(this.state.bookID)
 
     let Book
     dbRef.once("value", function (snapshot) {
@@ -62,7 +63,9 @@ class AllDetails extends Component {
     return (
       <Book>
         <BookImage>
-          <Cover alt="" src={book.coverIMG} />
+          {book.coverIMG
+            ? <Cover alt="" src={book.coverIMG} />
+            : <Cover alt="" src="" />}
         </BookImage>
 
         <BookDetails>

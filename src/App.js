@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Redirect, BrowserRouter, Switch } from 'react-router-dom'
+import { Route, Redirect, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
@@ -7,7 +7,7 @@ import Home from './Home'
 import BookDetails from './BookDetails'
 import AddBookForm from './AddBookForm'
 import SearchForm from './search'
-// import Login from './Login'
+import Login from './Login'
 import firebase, { fbAuth, dbRefBooks, ref } from './firebase'
 
 const Container = styled.div`
@@ -21,7 +21,7 @@ function PrivateRoute({ component: Component, authed, ...rest }) {
     <Route
       {...rest}
       render={(props) => authed === true
-        ? <Component {...props} />
+        ? <Component {...props} {...rest} />
         : <Redirect to={{ pathname: '/login', state: { from: props.location } }} />}
     />
   )
@@ -83,49 +83,49 @@ class App extends Component {
   componentWillUnmount() { this.removeListener() }
   reRender = () => { this.componentWillMount() }
 
-  // createBook(book) {
-  //   var newPostKey = firebase.database().ref().child('books').push().key;
-  //   var updates = {};
-  //   updates['/books/' + newPostKey] = book;
-  //   firebase.database().ref().update(updates)
-  // }
+  createBook(book) {
+    var newPostKey = firebase.database().ref().child('books').push().key;
+    var updates = {};
+    updates['/books/' + newPostKey] = book;
+    firebase.database().ref().update(updates)
+  }
 
   render() {
     return this.state.loading === true ? <h1>Loading...</h1> : (
-      <BrowserRouter>
-        <div className="app">
-          <Header />
-          <Container>
-            <Switch>
-              <PublicRoute
-                path='/' exact
-                component={Home}
-                current={this.state.current}
-                want={this.state.want}
-                read={this.state.read}
-                none={this.state.none}
-                refresh={this.reRender}
-                authed={this.state.authed} />
-              <PublicRoute
-                authed={this.state.authed}
-                path='/search'
-                component={SearchForm}
-                books={this.state.books}
-                refresh={this.reRender} />
-              <PublicRoute
-                path='/book/'
-                component={BookDetails} />
-              {/* PRIVATE: ADD */}
-              <PrivateRoute
-                path='/add'
-                component={AddBookForm}
-                authed={this.state.authed} />
-              {/* PUBLIC: LOGIN */}
-            </Switch>
-          </Container>
-          <Footer authed={this.state.authed} />
-        </div>
-      </BrowserRouter>
+      <div>
+        <Header />
+        <Container>
+          <Switch>
+            <PublicRoute
+              path='/' exact
+              component={Home}
+              current={this.state.current}
+              want={this.state.want}
+              read={this.state.read}
+              none={this.state.none}
+              refresh={this.reRender}
+              authed={this.state.authed} />
+            <PublicRoute
+              authed={this.state.authed}
+              path='/search'
+              component={SearchForm}
+              books={this.state.books}
+              refresh={this.reRender} />
+            <PublicRoute
+              path='/book/'
+              component={BookDetails} />
+            <PublicRoute
+              path='/login'
+              component={Login} />
+            <PrivateRoute
+              path='/add'
+              component={AddBookForm}
+              authed={this.state.authed}
+              createBook={this.createBook} />
+          </Switch>
+        </Container>
+        <Footer authed={this.state.authed} />
+      </div>
     );
   }
 }

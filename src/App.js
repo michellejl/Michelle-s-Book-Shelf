@@ -5,7 +5,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Home from './Home'
 import BookDetails from './BookDetails'
-// import AddBookForm from './AddBookForm'
+import AddBookForm from './AddBookForm'
 import SearchForm from './search'
 // import Login from './Login'
 import firebase, { fbAuth, dbRefBooks, ref } from './firebase'
@@ -116,6 +116,10 @@ class App extends Component {
                 path='/book/'
                 component={BookDetails} />
               {/* PRIVATE: ADD */}
+              <PrivateRoute
+                path='/add'
+                component={AddBookForm}
+                authed={this.state.authed} />
               {/* PUBLIC: LOGIN */}
             </Switch>
           </Container>

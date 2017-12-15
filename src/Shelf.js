@@ -31,7 +31,7 @@ class Shelf extends Component {
       <BookShelf key={this.props.shelf}>
         <ShelfTitle>{this.props.shelf}</ShelfTitle>
         {this.props.books.map((book) => (
-          <SimpleBook key={book[1].title} bookID={book[0]} book={book[1]} refresh={this.props.refresh} />
+          <SimpleBook key={book[1].title} bookID={book[0]} book={book[1]} refresh={this.props.refresh} authed={this.props.authed} />
         ))}
       </BookShelf>
     );

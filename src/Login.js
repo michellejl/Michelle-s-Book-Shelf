@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import serializeForm from 'form-serialize'
 import styled from 'styled-components'
 import firebase from './firebase'
+import { login } from './authHelpers'
 
 var c_blue = '#5AB9CF'
 var c_white = '#FEFEFE'
@@ -10,6 +11,8 @@ var c_white = '#FEFEFE'
 var c_dark = '#3B3F42'
 
 const AddForm = styled.form`
+  max-width: 500px;
+  margin: 0 auto;
 
 `
 const Fieldset = styled.fieldset`
@@ -63,14 +66,12 @@ class Login extends Component {
     userStatus: this.props.currentStatus
   }
 
-
-
   handleSubmit = (e) => {
     e.preventDefault()
     const values = serializeForm(e.target, { hash: true })
     const email = values.email
     const password = values.password
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+    login(email, password).catch(function (error) {
       // var errorCode = error.code;
       var errorMessage = error.message;
       alert(errorMessage)
@@ -80,13 +81,11 @@ class Login extends Component {
     });
   }
 
-
   render() {
 
     return (
       <AddForm onSubmit={this.handleSubmit}>
         <p>{this.state.errorMessage}</p>
-        <p>{this.state.userStatus + ' '}</p>
         <Fieldset>
           <Legend>Login</Legend>
           <InputField type="text" name="email" placeholder="Email" required />

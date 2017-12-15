@@ -78,7 +78,7 @@ const Button = styled.input`
 class AddBookForm extends Component {
 
   state = {
-    selectedShelf: '',
+    selectedShelf: 'none',
   }
 
   handleSubmit = (e) => {
@@ -86,6 +86,8 @@ class AddBookForm extends Component {
     const values = serializeForm(e.target, { hash: true })
     if (values) {
       this.props.createBook(values)
+      alert('Book has been added')
+      document.getElementById("NewBookForm").reset()
     }
   }
 
@@ -97,13 +99,13 @@ class AddBookForm extends Component {
 
   render() {
     return (
-      <AddForm onSubmit={this.handleSubmit}>
+      <AddForm onSubmit={this.handleSubmit} id="NewBookForm">
         <Fieldset>
           <Legend>Add a New Book</Legend>
-          <InputField type="text" name="title" placeholder="Title" />
-          <InputField type="text" name="author" placeholder="Author" />
-          <InputField type="text" name="imageURL" placeholder="Image URL" />
-          <TextArea cols="30" rows="5" name="summary" placeholder="Summary" />
+          <InputField type="text" name="title" placeholder="Title" required />
+          <InputField type="text" name="author" placeholder="Author" required />
+          <InputField type="text" name="imageURL" placeholder="Image URL" required />
+          <TextArea cols="30" rows="5" name="summary" placeholder="Summary" required />
 
           <Shelf>
             <label>

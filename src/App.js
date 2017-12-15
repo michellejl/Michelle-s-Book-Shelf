@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
+import React, { Component } from 'react'
+import { Route, Redirect, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
-import Shelf from './Shelf'
+import Home from './Home'
+import BookDetails from './BookDetails'
 import AddBookForm from './AddBookForm'
 import SearchForm from './search'
-import AllDetails from './BookDetails'
 import Login from './Login'
-import firebase from './firebase'
+import firebase, { fbAuth, dbRefBooks, ref } from './firebase'
 
 const Container = styled.div`
   margin: 25px auto;
@@ -16,21 +16,39 @@ const Container = styled.div`
   max-width: 750px;
 `
 
+function PrivateRoute({ component: Component, authed, ...rest }) {
+  return (
+    <Route
+      {...rest}
+      render={(props) => authed === true
+        ? <Component {...props} {...rest} />
+        : <Redirect to={{ pathname: '/login', state: { from: props.location } }} />}
+    />
+  )
+}
+
+function PublicRoute({ component: Component, authed, ...rest }) {
+  return (
+    <Route
+      render={(props) => <Component {...props} {...rest} authed={authed} />}
+    />
+  )
+}
+
 class App extends Component {
   state = {
+    authed: false,
+    loading: true,
     books: [],
     current: [],
     want: [],
     read: [],
-    none: [],
-    user: false
+    none: []
   }
 
-  componentDidMount() {
-    const dbRef = firebase.database().ref("books/")
-
+  componentWillMount() {
     let AllBooks
-    dbRef.once("value", function (snapshot) {
+    dbRefBooks.once("value", function (snapshot) {
       AllBooks = snapshot.val();
     }, function (errorObject) {
       console.log("The read failed: " + errorObject.code);
@@ -46,13 +64,24 @@ class App extends Component {
       })
       this.setState({ books: AllBooks, current, want, read, none })
     })
-
-
   }
-
-  reRender = () => {
-    this.componentDidMount()
+  componentDidMount() {
+    this.removeListener = fbAuth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({
+          authed: true,
+          loading: false,
+        })
+      } else {
+        this.setState({
+          authed: false,
+          loading: false
+        })
+      }
+    })
   }
+  componentWillUnmount() { this.removeListener() }
+  reRender = () => { this.componentWillMount() }
 
   createBook(book) {
     var newPostKey = firebase.database().ref().child('books').push().key;
@@ -61,90 +90,76 @@ class App extends Component {
     firebase.database().ref().update(updates)
   }
 
-  setUserStatus = (status) => {
-    this.setState({ user: status })
-    console.log('loggedin')
-  }
-
   render() {
-
-    return (
-      <div className="App">
+    return this.state.loading === true ? <h1>Loading...</h1> : (
+      <div>
         <Header />
-        <Route exact path="/" render={() => (
-          <Container>
-            <Shelf
-              books={this.state.current}
-              shelf='Currently Reading'
+        <Container>
+          <Switch>
+            <PublicRoute
+              path='/' exact
+              component={Home}
+              current={this.state.current}
+              want={this.state.want}
+              read={this.state.read}
+              none={this.state.none}
+              refresh={this.reRender}
+              authed={this.state.authed} />
+            <PublicRoute
+              authed={this.state.authed}
+              path='/search'
+              component={SearchForm}
+              books={this.state.books}
               refresh={this.reRender} />
-            <Shelf
-              books={this.state.want}
-              shelf='Want to Read'
-              refresh={this.reRender} />
-            <Shelf
-              books={this.state.read}
-              shelf='Read'
-              refresh={this.reRender} />
-            <Shelf
-              books={this.state.none}
-              shelf='Not Shelved'
-              refresh={this.reRender} />
-          </Container>
-        )} />
-        <Route path="/shelf/currently-reading" render={() => (
-          <Container>
-            <Shelf
-              books={this.state.current}
-              shelf='Currently Reading' />
-          </Container>
-        )} />
-        <Route path="/shelf/want-to-read" render={() => (
-          <Container>
-            <Shelf
-              books={this.state.want}
-              shelf='Want to Read' />
-          </Container>
-        )} />
-        <Route path="/shelf/read" render={() => (
-          <Container>
-            <Shelf
-              books={this.state.read}
-              shelf='Read' />
-          </Container>
-        )} />
-        <Route path="/add" render={({ history }) => (
-          <Container>
-            <AddBookForm createBook={(book) => {
-              this.createBook(book)
-              history.push('/')
-              this.componentDidMount()
-            }} />
-          </Container>
-        )} />
-        <Route path="/login" render={({ history }) => (
-          <Container>
-            <Login setUserStatus={(userStatus) => {
-              this.setUserStatus(userStatus)
-              history.push('/')
-              this.componentDidMount()
-            }}
-              currentStatus={this.state.user} />
-          </Container>
-        )} />
-        <Route path="/search" render={() => (
-          <Container>
-            <SearchForm books={this.state.books} refresh={this.reRender} />
-          </Container>
-        )} />
-        <Route path="/book/" render={() => (
-          <Container>
-            <AllDetails />
-          </Container>
-        )} />
-        <Footer loggedin={this.state.user} />
+            <PublicRoute
+              path='/book/'
+              component={BookDetails} />
+            <PublicRoute
+              path='/login'
+              component={Login} />
+            <PrivateRoute
+              path='/add'
+              component={AddBookForm}
+              authed={this.state.authed}
+              createBook={this.createBook} />
+          </Switch>
+        </Container>
+        <Footer authed={this.state.authed} />
       </div>
     );
   }
 }
 
 export default App;
+
+{/* 
+<Route path="/add" render={({ history }) => (
+  <Container>
+    {this.props.currentStatus ?
+      <AddBookForm createBook={(book) => {
+        this.createBook(book)
+        history.push('/')
+        this.componentDidMount()
+      }} />
+      :
+      <p>You must be logged in to add a new book.</p>
+    }
+  </Container>
+)} />
+<Route path="/login" render={({ history }) => (
+  <Container>
+    <Login setUserStatus={(userStatus) => {
+      this.setUserStatus(userStatus)
+      history.push('/')
+      this.componentDidMount()
+    }}
+      currentStatus={this.state.user} />
+  </Container>
+)} />
+
+<Route path="/book/" render={() => (
+  <Container>
+    <AllDetails />
+  </Container>
+)} />
+<Footer loggedin={this.state.user} /> */}

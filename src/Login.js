@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import serializeForm from 'form-serialize'
 import styled from 'styled-components'
-import firebase from './firebase'
 import { login } from './authHelpers'
 
 var c_blue = '#5AB9CF'

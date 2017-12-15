@@ -67,11 +67,3 @@ class SearchForm extends Component {
 }
 
 export default SearchForm;
-
-
-{/* 
-
-        <Shelf
-          books={showingBooks}
-          shelf=''
-          refresh={this.props.refresh} /> */}

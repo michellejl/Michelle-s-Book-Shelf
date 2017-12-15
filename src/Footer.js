@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Login from './Login'
 import { logout } from './authHelpers'
 
 
@@ -57,14 +56,3 @@ class Footer extends Component {
 }
 
 export default Footer;
-
-{/* <Link href="/">Home</Link> |
-        <Link href="/add">Add a Book</Link> |
-        <Link href="/search">Search</Link>
-        <br />
-        <br />
-        {this.props.currentStatus ?
-          <button>Log Out</button>
-          :
-          <Login />
-        } */}

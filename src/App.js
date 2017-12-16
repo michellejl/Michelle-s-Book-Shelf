@@ -8,7 +8,7 @@ import BookDetails from './BookDetails'
 import AddBookForm from './AddBookForm'
 import SearchForm from './search'
 import Login from './Login'
-import firebase, { fbAuth, dbRefBooks, ref } from './firebase'
+import firebase, { fbAuth, dbRefBooks } from './firebase'
 
 const Container = styled.div`
   margin: 25px auto;
@@ -54,6 +54,7 @@ class App extends Component {
       console.log("The read failed: " + errorObject.code);
     }).then((books) => {
       AllBooks = Object.keys(AllBooks).map((key) => [Number(key), AllBooks[key]]);
+      console.dir(AllBooks)
       let current = [], read = [], want = [], none = []
       // eslint-disable-next-line
       AllBooks.map((book) => {
@@ -131,35 +132,3 @@ class App extends Component {
 }
 
 export default App;
-
-{/* 
-<Route path="/add" render={({ history }) => (
-  <Container>
-    {this.props.currentStatus ?
-      <AddBookForm createBook={(book) => {
-        this.createBook(book)
-        history.push('/')
-        this.componentDidMount()
-      }} />
-      :
-      <p>You must be logged in to add a new book.</p>
-    }
-  </Container>
-)} />
-<Route path="/login" render={({ history }) => (
-  <Container>
-    <Login setUserStatus={(userStatus) => {
-      this.setUserStatus(userStatus)
-      history.push('/')
-      this.componentDidMount()
-    }}
-      currentStatus={this.state.user} />
-  </Container>
-)} />
-
-<Route path="/book/" render={() => (
-  <Container>
-    <AllDetails />
-  </Container>
-)} />
-<Footer loggedin={this.state.user} /> */}

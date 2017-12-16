@@ -23,16 +23,18 @@ class Shelf extends Component {
 
   state = {}
 
-
-
   render() {
-
     return (
       <BookShelf key={this.props.shelf}>
         <ShelfTitle>{this.props.shelf}</ShelfTitle>
-        {this.props.books.map((book) => (
-          <SimpleBook key={book[1].title} bookID={book[0]} book={book[1]} refresh={this.props.refresh} authed={this.props.authed} />
-        ))}
+        {this.props.books.length === 0
+          ? <p>There are currently no books here! Don't cry...They might just be loading still.</p>
+          : (
+            this.props.books.map((book) => (
+              <SimpleBook key={book[1].title} bookID={book[0]} book={book[1]} refresh={this.props.refresh} authed={this.props.authed} />
+            ))
+          )}
+
       </BookShelf>
     );
   }

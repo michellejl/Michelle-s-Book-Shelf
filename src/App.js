@@ -54,6 +54,7 @@ class App extends Component {
       console.log("The read failed: " + errorObject.code);
     }).then((books) => {
       AllBooks = Object.keys(AllBooks).map((key) => [Number(key), AllBooks[key]]);
+      console.dir(AllBooks)
       let current = [], read = [], want = [], none = []
       // eslint-disable-next-line
       AllBooks.map((book) => {

@@ -46,7 +46,6 @@ class AllDetails extends Component {
 
   componentDidMount() {
     const dbRef = firebase.database().ref("books/" + this.state.bookID)
-    console.log(this.state.bookID)
 
     let Book
     dbRef.once("value", function (snapshot) {
